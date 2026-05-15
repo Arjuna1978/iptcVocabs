@@ -69,8 +69,10 @@ def phase_2_download():
 
     print(f"Phase 2: Processing {len(lines)} downloads...")
 
+    # Counter for fallback filenames
+    unknown_counter = 1
+
     for line in lines:
-        # We still have the URL from Phase 1
         _, url = line.split('|')
         
         try:
@@ -78,16 +80,17 @@ def phase_2_download():
             res = requests.get(url, headers=HEADERS, timeout=10)
             soup = BeautifulSoup(res.text, 'html.parser')
             
-            # --- NEW NAME EXTRACTION LOGIC ---
-            # Look for <span class="infotext1"> which contains the Name(en-GB)
+            # 1. Extract name from <span class="infotext1">
             name_span = soup.find('span', class_='infotext1')
-            if name_span:
+            
+            if name_span and name_span.get_text(strip=True):
                 final_name = name_span.get_text(strip=True)
             else:
-                # Fallback to the URL slug if the span isn't found
-                final_name = url.strip('/').split('/')[-1]
+                # Fallback if span is missing or empty
+                final_name = f"Unknown_{unknown_counter}"
+                unknown_counter += 1
             
-            # Target the specific 'RDF/Turtle' link
+            # 2. Find the RDF/Turtle download link
             turtle_link = None
             for a in soup.find_all('a', href=True):
                 if "RDF/Turtle" in a.get_text():
@@ -97,68 +100,28 @@ def phase_2_download():
             if turtle_link:
                 dl_url = urljoin(url, turtle_link['href'])
                 
-                # Sanitize filename
-                clean_name = final_name.replace("/", "-").replace("\\", "-").replace(":", "")
+                # 3. Clean the filename
+                # Replace slashes/backslashes with hyphens to avoid path errors
+                clean_name = final_name.replace("/", "-").replace("\\", "-")
+                # Remove other illegal characters
                 safe_name = "".join([c for c in clean_name if c.isalnum() or c in (' ', '-', '_')]).strip()
-                filename = f"{safe_name}.ttl"
                 
+                filename = f"{safe_name}.ttl"
+                filepath = os.path.join(DOWNLOAD_DIR, filename)
+
                 print(f"  -> Downloading: {filename}")
+                
                 file_data = requests.get(dl_url, headers=HEADERS)
-                with open(os.path.join(DOWNLOAD_DIR, filename), 'wb') as f:
+                with open(filepath, 'wb') as f:
                     f.write(file_data.content)
             else:
-                print(f"  [!] No Turtle link for: {final_name}")
+                print(f"  [!] No Turtle link found for: {final_name} at {url}")
                 
         except Exception as e:
             print(f"  [!] Failed to process {url}: {e}")
 
-    """Iterates through schemes.txt and downloads the RDF/Turtle files."""
-    if not os.path.exists(SCHEMES_FILE):
-        print("Run Phase 1 first.")
-        return
-
-    if not os.path.exists(DOWNLOAD_DIR):
-        os.makedirs(DOWNLOAD_DIR)
-
-    with open(SCHEMES_FILE, "r", encoding="utf-8") as f:
-        lines = [line.strip() for line in f if '|' in line]
-
-    print(f"Phase 2: Processing {len(lines)} downloads...")
-
-    for line in lines:
-        name, url = line.split('|')
-        
-        try:
-            time.sleep(0.2) # Avoid being flagged as a bot
-            res = requests.get(url, headers=HEADERS, timeout=10)
-            soup = BeautifulSoup(res.text, 'html.parser')
-            
-            # Target the specific 'RDF/Turtle' link
-            turtle_link = None
-            for a in soup.find_all('a', href=True):
-                if "RDF/Turtle" in a.get_text():
-                    turtle_link = a
-                    break
-            
-            if turtle_link:
-                dl_url = urljoin(url, turtle_link['href'])
-                
-                # Sanitize filename for Linux/Windows
-                clean_name = name.replace("/", "-").replace("\\", "-").replace(":", "")
-                safe_name = "".join([c for c in clean_name if c.isalnum() or c in (' ', '-', '_')]).strip()
-                filename = f"{safe_name}.ttl"
-                
-                print(f"  -> Downloading: {filename}")
-                file_data = requests.get(dl_url, headers=HEADERS)
-                with open(os.path.join(DOWNLOAD_DIR, filename), 'wb') as f:
-                    f.write(file_data.content)
-            else:
-                print(f"  [!] No Turtle link for: {name}")
-                
-        except Exception as e:
-            print(f"  [!] Failed {name}: {e}")
-
 if __name__ == "__main__":
+    # Ensure both phases run
     phase_1_discovery()
     phase_2_download()
     print("\nAll tasks finished.")
