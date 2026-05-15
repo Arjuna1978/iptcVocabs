@@ -1,0 +1,833 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix altidrole:  <http://cv.iptc.org/newscodes/altidrole/> .
+@prefix aoprop:  <http://cv.iptc.org/newscodes/aoproperty/> .
+@prefix app:  <http://cv.iptc.org/newscodes/application/> .
+@prefix aspfacet:  <http://cv.iptc.org/newscodes/asportfacet/> .
+@prefix aspfacetvalue:  <http://cv.iptc.org/newscodes/asportfacetvalue/> .
+@prefix acdc:  <http://cv.iptc.org/newscodes/audiocodec/> .
+@prefix catinat:  <http://cv.iptc.org/newscodes/catinature/> .
+@prefix chprop:  <http://cv.iptc.org/newscodes/characteristicsproperty/> .
+@prefix cinat:  <http://cv.iptc.org/newscodes/cinature/> .
+@prefix colsp:  <http://cv.iptc.org/newscodes/colorspace/> .
+@prefix colin:  <http://cv.iptc.org/newscodes/colourindicator/> .
+@prefix ctech:  <http://cv.iptc.org/newscodes/commtech/> .
+@prefix cptdefrole:  <http://cv.iptc.org/newscodes/conceptdefinitionrole/> .
+@prefix cptnoterole:  <http://cv.iptc.org/newscodes/conceptnoterole/> .
+@prefix cpprole: <http://cv.iptc.org/newscodes/contentprodpartyrole/> .
+@prefix crel:  <http://cv.iptc.org/newscodes/conceptrelation/> .
+@prefix conf:  <http://cv.iptc.org/newscodes/confidence/> .
+@prefix ciprol:  <http://cv.iptc.org/newscodes/contactinfopartrole/> .
+@prefix cwarn:  <http://cv.iptc.org/newscodes/contentwarning/> .
+@prefix ctrol:  <http://cv.iptc.org/newscodes/contributorrole/> .
+@prefix cpnat:  <http://cv.iptc.org/newscodes/cpnature/> .
+@prefix drol:  <http://cv.iptc.org/newscodes/descriptionrole/> .
+@prefix digsrctype:  <http://cv.iptc.org/newscodes/digitalsourcetype/> .
+@prefix dimensionunit:  <http://cv.iptc.org/newscodes/dimensionunit/> .
+@prefix ednoterole:  <http://cv.iptc.org/newscodes/ednoterole/> .
+@prefix dummy:  <http://cv.iptc.org/newscodes/dummy/> .
+@prefix erol:  <http://cv.iptc.org/newscodes/edrole/> .
+@prefix encd:  <http://cv.iptc.org/newscodes/encoding/> .
+@prefix entityprop:  <http://cv.iptc.org/newscodes/entityproperty/> .
+@prefix ecirol:  <http://cv.iptc.org/newscodes/eventcontactinforole/> .
+@prefix edconf:  <http://cv.iptc.org/newscodes/eventdateconfirm/> .
+@prefix eocstat:  <http://cv.iptc.org/newscodes/eventoccurstatus/> .
+@prefix eorol:  <http://cv.iptc.org/newscodes/eventorganiserrole/> .
+@prefix eprol:  <http://cv.iptc.org/newscodes/eventparticipantrole/> .
+@prefix eregrol:  <http://cv.iptc.org/newscodes/eventregrole/> .
+@prefix fisymtype:  <http://cv.iptc.org/newscodes/financialinstrumentsymboltype/> .
+@prefix frmt:  <http://cv.iptc.org/newscodes/format/> .
+@prefix gen:  <http://cv.iptc.org/newscodes/generic/> .
+@prefix genre:  <http://cv.iptc.org/newscodes/genre/> .
+@prefix hashscope:  <http://cv.iptc.org/newscodes/hashscope/> .
+@prefix hashtype:  <http://cv.iptc.org/newscodes/hashtype/> .
+@prefix hopaction:  <http://cv.iptc.org/newscodes/hopaction/> .
+@prefix hatarget:  <http://cv.iptc.org/newscodes/hopactiontarget/> .
+@prefix howextr:  <http://cv.iptc.org/newscodes/howextracted/> .
+@prefix howpr:  <http://cv.iptc.org/newscodes/howpresent/> .
+@prefix ikos:  <http://cv.iptc.org/newscodes/ikos/> .
+@prefix impt:  <http://cv.iptc.org/newscodes/importance/> .
+@prefix isrol:  <http://cv.iptc.org/newscodes/infosourcerole/> .
+@prefix irel:  <http://cv.iptc.org/newscodes/itemrelation/> .
+@prefix irep:  <http://cv.iptc.org/newscodes/itemrepresentation/> .
+@prefix lbtyp:  <http://cv.iptc.org/newscodes/labeltype/> .
+@prefix lrol:  <http://cv.iptc.org/newscodes/languagerole/> .
+@prefix loutorient:  <http://cv.iptc.org/newscodes/layoutorientation/> .
+@prefix loctyp:  <http://cv.iptc.org/newscodes/location/> .
+@prefix medtop:  <http://cv.iptc.org/newscodes/mediatopic/> .
+@prefix mtyp:  <http://cv.iptc.org/newscodes/mediatype/> .
+@prefix medtype:  <http://cv.iptc.org/newscodes/mediatype1/> .
+@prefix nprt:  <http://cv.iptc.org/newscodes/namepart/> .
+@prefix nrol:  <http://cv.iptc.org/newscodes/namerole/> .
+@prefix ncostat:  <http://cv.iptc.org/newscodes/newscoveragestatus/> .
+@prefix nityp:  <http://cv.iptc.org/newscodes/newsitemtype/> .
+@prefix nmsig:  <http://cv.iptc.org/newscodes/newsmsgsignal/> .
+@prefix nprod:  <http://cv.iptc.org/newscodes/newsproduct/> .
+@prefix nprov:  <http://cv.iptc.org/newscodes/newsprovider/> .
+@prefix ninat:  <http://cv.iptc.org/newscodes/ninature/> .
+@prefix not:  <http://cv.iptc.org/newscodes/notation/> .
+@prefix oito:  <http://cv.iptc.org/newscodes/ofinterestto/> .
+@prefix pgrmod:  <http://cv.iptc.org/newscodes/pkggroupmode/> .
+@prefix plinat:  <http://cv.iptc.org/newscodes/plinature/> .
+@prefix prio:  <http://cv.iptc.org/newscodes/priority/> .
+@prefix prodgenre:  <http://cv.iptc.org/newscodes/productgenre/> .
+@prefix prop:  <http://cv.iptc.org/newscodes/property/> .
+@prefix prov:  <http://cv.iptc.org/newscodes/provider/> .
+@prefix stat:  <http://cv.iptc.org/newscodes/pubstatusg2/> .
+@prefix rtype:  <http://cv.iptc.org/newscodes/ratertype/> .
+@prefix rcalctype:  <http://cv.iptc.org/newscodes/rcalctype/> .
+@prefix rel:  <http://cv.iptc.org/newscodes/relevance/> .
+@prefix rnd:  <http://cv.iptc.org/newscodes/rendition/> .
+@prefix riaspect:  <http://cv.iptc.org/newscodes/riaspect/> .
+@prefix rightsprop:  <http://cv.iptc.org/newscodes/rightsproperty/> .
+@prefix riscope:  <http://cv.iptc.org/newscodes/riscope/> .
+@prefix role1:  <http://cv.iptc.org/newscodes/role1/> .
+@prefix rscaleunit:  <http://cv.iptc.org/newscodes/rscaleunit/> .
+@prefix scn:  <http://cv.iptc.org/newscodes/scene/> .
+@prefix sev:  <http://cv.iptc.org/newscodes/severity/> .
+@prefix sig:  <http://cv.iptc.org/newscodes/signal/> .
+@prefix pst1:  <http://cv.iptc.org/newscodes/status1/> .
+@prefix subj:  <http://cv.iptc.org/newscodes/subjectcode/> .
+@prefix squ:  <http://cv.iptc.org/newscodes/subjectqualifier/> .
+@prefix timeunit:  <http://cv.iptc.org/newscodes/timeunit/> .
+@prefix tpctyp:  <http://cv.iptc.org/newscodes/topictype/> .
+@prefix urgy:  <http://cv.iptc.org/newscodes/urgency/> .
+@prefix useracttype:  <http://cv.iptc.org/newscodes/useractiontype/> .
+@prefix valfmt:  <http://cv.iptc.org/newscodes/valueformat/> .
+@prefix vcdc:  <http://cv.iptc.org/newscodes/videocodec/> .
+@prefix videodef:  <http://cv.iptc.org/newscodes/videodefinition/> .
+@prefix ivqu:  <http://cv.iptc.org/newscodes/videoqualifier/> .
+@prefix sov:  <http://cv.iptc.org/newscodes/videoscaling/> .
+@prefix why:  <http://cv.iptc.org/newscodes/whypresent/> .
+@prefix wldreg:  <http://cv.iptc.org/newscodes/worldregion/> .
+@prefix a1312cat:  <http://cvx.iptc.org/anpa1312-category/> .
+@prefix a1312prio:  <http://cvx.iptc.org/anpa1312-priority/> .
+@prefix a1312svc:  <http://cvx.iptc.org/anpa1312-servicelevel/> .
+@prefix a1312vers:  <http://cvx.iptc.org/anpa1312-version/> .
+@prefix bcp47:  <http://cvx.iptc.org/bcp47/> .
+@prefix cusip:  <http://cvx.iptc.org/cusip/> .
+@prefix gics:  <http://cvx.iptc.org/gics/> .
+@prefix isin:  <http://cvx.iptc.org/isin/> .
+@prefix mic:  <http://cvx.iptc.org/iso10383-mic/> .
+@prefix iso3166-1a2:  <http://cvx.iptc.org/iso3166-1a2/> .
+@prefix iso3166-1a3:  <http://cvx.iptc.org/iso3166-1a3/> .
+@prefix iso4217a:  <http://cvx.iptc.org/iso4217a/> .
+@prefix iso4217n:  <http://cvx.iptc.org/iso4217n/> .
+@prefix secst:  <http://cvx.iptc.org/secst/> .
+@prefix sedol:  <http://cvx.iptc.org/sedol/> .
+@prefix tidm:  <http://cvx.iptc.org/tidm/> .
+@prefix dbpedia:  <http://dbpedia.org/resource/> .
+@prefix mb-artist:  <http://musicbrainz.org/artist/> .
+@prefix mb-label:  <http://musicbrainz.org/label/> .
+@prefix mb-recording:  <http://musicbrainz.org/recording/> .
+@prefix mb-release:  <http://musicbrainz.org/release/> .
+@prefix mb-releasegroup:  <http://musicbrainz.org/release-group/> .
+@prefix mb-work:  <http://musicbrainz.org/work/> .
+@prefix geonames:  <http://sws.geonames.org/> .
+@prefix freebase:  <http://www.freebase.com> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix wikidata:  <http://www.wikidata.org/entity/> .
+
+
+<http://cv.iptc.org/newscodes/asportfacet/> 
+	rdf:type skos:ConceptScheme ; 
+  ikos:prefSchemeAlias "aspfacet" ;
+  ikos:authority "http://www.iptc.org" ;
+  dct:rightsHolder "IPTC, International Press Telecommunications Council - https://iptc.org" ;
+  ikos:licenceLink "http://creativecommons.org/licenses/by/4.0/" ;
+  ikos:dateReleased "2019-11-25T12:00:00+00:00"^^xsd:dateTime ;
+  dct:dateSubmitted "2019-11-25T12:00:00+00:00"^^xsd:dateTime ;
+  skos:prefLabel "A Sport Facet"@en-GB ;
+  skos:definition "A sport facet of a concept."@en-GB ;
+	skos:HasTopConcept		aspfacet:ageclass ;
+	skos:HasTopConcept		aspfacet:alpineskiingtype ;
+	skos:HasTopConcept		aspfacet:artisticgymtype ;
+	skos:HasTopConcept		aspfacet:billiardtype ;
+	skos:HasTopConcept		aspfacet:bmxfreestyletype ;
+	skos:HasTopConcept		aspfacet:canoekayaktype ;
+	skos:HasTopConcept		aspfacet:cyclingtype ;
+	skos:HasTopConcept		aspfacet:distance ;
+	skos:HasTopConcept		aspfacet:dogracingtype ;
+	skos:HasTopConcept		aspfacet:equestriantype ;
+	skos:HasTopConcept		aspfacet:horseracingtype ;
+	skos:HasTopConcept		aspfacet:fencingtype ;
+	skos:HasTopConcept		aspfacet:figureskatingtype ;
+	skos:HasTopConcept		aspfacet:flyingdisctype ;
+	skos:HasTopConcept		aspfacet:freestyleskiingtype ;
+	skos:HasTopConcept		aspfacet:gender ;
+	skos:HasTopConcept		aspfacet:jaialaitype ;
+	skos:HasTopConcept		aspfacet:motorcarracingtype ;
+	skos:HasTopConcept		aspfacet:motorcyclingtype ;
+	skos:HasTopConcept		aspfacet:mountainbikingtype ;
+	skos:HasTopConcept		aspfacet:nordicskiingtype ;
+	skos:HasTopConcept		aspfacet:crosscountryskiingtype ;
+	skos:HasTopConcept		aspfacet:parasport ;
+	skos:HasTopConcept		aspfacet:parasporttype ;
+	skos:HasTopConcept		aspfacet:platformheight ;
+	skos:HasTopConcept		aspfacet:racetime ;
+	skos:HasTopConcept		aspfacet:racetype ;
+	skos:HasTopConcept		aspfacet:rhythmgymtype ;
+	skos:HasTopConcept		aspfacet:rowingtype ;
+	skos:HasTopConcept		aspfacet:sailingtype ;
+	skos:HasTopConcept		aspfacet:shootingtype ;
+	skos:HasTopConcept		aspfacet:soccertype ;
+	skos:HasTopConcept		aspfacet:snowboardingtype ;
+	skos:HasTopConcept		aspfacet:swimmingtype ;
+	skos:HasTopConcept		aspfacet:teamsize ;
+	skos:HasTopConcept		aspfacet:waterskiingtype ;
+	skos:HasTopConcept		aspfacet:weightclasstype ;
+	skos:HasTopConcept		aspfacet:weightliftingtype ;
+	skos:HasTopConcept		aspfacet:windsurfingtype .
+
+aspfacet:ageclass
+	rdf:type skos:Concept ;
+	skos:prefLabel	"age class"@en-GB ;
+	skos:definition	"The age range of a competition"@en-GB ;
+	skos:note	"This facet can be applied to any Media Topic that is a child or grandchild of a sport competition discipline (medtop:20000822). This facet can take a string or scalar value."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:isFacetOf medtop:20000822 .
+
+aspfacet:alpineskiingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"alpine skiing type"@en-GB ;
+	skos:definition	"A type of alpine skiing competion"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:combined-alpineskiing ;
+	ikos:hasObject aspfacetvalue:parallelslalom-alpineskiing ;
+	ikos:hasObject aspfacetvalue:giantslalom-alpineskiing ;
+	ikos:hasObject aspfacetvalue:superg ;
+	ikos:isFacetOf medtop:20001057 ;
+	ikos:hasObject aspfacetvalue:slalom-alpineskiing ;
+	ikos:hasObject aspfacetvalue:downhill .
+
+aspfacet:artisticgymtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"artistic gymnastics type"@en-GB ;
+	skos:definition	"A type of artistic gymnastics competition"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:isFacetOf medtop:20001152 ;
+	ikos:hasObject aspfacetvalue:horizontalbar ;
+	ikos:hasObject aspfacetvalue:vault ;
+	ikos:hasObject aspfacetvalue:rings ;
+	ikos:hasObject aspfacetvalue:beam ;
+	ikos:hasObject aspfacetvalue:unevenbars ;
+	ikos:hasObject aspfacetvalue:floorexercise ;
+	ikos:hasObject aspfacetvalue:parallelbars ;
+	ikos:hasObject aspfacetvalue:pommelhorse .
+
+aspfacet:billiardtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"billiards type"@en-GB ;
+	skos:definition	"A type of billiards, snooker or pool"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:snooker ;
+	ikos:hasObject aspfacetvalue:14.1 ;
+	ikos:hasObject aspfacetvalue:8-ball ;
+	ikos:hasObject aspfacetvalue:9-ball ;
+	ikos:isFacetOf medtop:20000853 ;
+	ikos:isFacetOf medtop:20001063 ;
+	ikos:isFacetOf medtop:20001015 .
+
+aspfacet:bmxfreestyletype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"BMX freestyle type"@en-GB ;
+	skos:definition	"A type of BMX Freestyle"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:vertramp ;
+	ikos:hasObject aspfacetvalue:park ;
+	ikos:hasObject aspfacetvalue:flatland ;
+	ikos:hasObject aspfacetvalue:street ;
+	ikos:isFacetOf medtop:20000895 .
+
+aspfacet:canoekayaktype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"canoe or kayak type"@en-GB ;
+	skos:definition	"A type of canoeing or kayaking competition"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:slalom-canoekayaking ;
+	ikos:isFacetOf medtop:20000877 ;
+	ikos:hasObject aspfacetvalue:canoe-sailing ;
+	ikos:isFacetOf medtop:20000979 ;
+	ikos:hasObject aspfacetvalue:pontoniering .
+
+aspfacet:cyclingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"cycling type"@en-GB ;
+	skos:definition	"A type of cycling race"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:madison-race ;
+	ikos:hasObject aspfacetvalue:track ;
+	ikos:hasObject aspfacetvalue:road-race ;
+	ikos:hasObject aspfacetvalue:teamsprint-cycling ;
+	ikos:hasObject aspfacetvalue:cyclo-cross ;
+	ikos:hasObject aspfacetvalue:points-race ;
+	ikos:isFacetOf medtop:20000892 ;
+	ikos:hasObject aspfacetvalue:bi-crossing ;
+	ikos:hasObject aspfacetvalue:keirin .
+
+aspfacet:distance
+	rdf:type skos:Concept ;
+	skos:prefLabel	"distance"@en-GB ;
+	skos:definition	"The spatial distance of a competition"@en-GB ;
+	skos:note	"This facet can be applied to any Media Topic that is a child or grandchild of sport competition discipline (medtop:20000822)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:isFacetOf medtop:20000822 .
+
+aspfacet:dogracingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"dog racing type"@en-GB ;
+	skos:definition	"A type of dog race"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:sled ;
+	ikos:isFacetOf medtop:20000919 ;
+	ikos:hasObject aspfacetvalue:ovaltrack .
+
+aspfacet:equestriantype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"equestrian type"@en-GB ;
+	skos:definition	"A type of equestrian competition"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:isFacetOf medtop:20000923 ;
+	ikos:hasObject aspfacetvalue:eventing ;
+	ikos:hasObject aspfacetvalue:dressage ;
+	ikos:hasObject aspfacetvalue:horse-driving ;
+	ikos:hasObject aspfacetvalue:reining ;
+	ikos:hasObject aspfacetvalue:cross-country-equestrian ;
+	ikos:hasObject aspfacetvalue:vaulting ;
+	ikos:hasObject aspfacetvalue:jumping ;
+	ikos:hasObject aspfacetvalue:endurance-equestrian .
+
+aspfacet:horseracingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"horse racing type"@en-GB ;
+	skos:definition	"A type of horse racing competition"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2019-07-23T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-07-23T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-07-23T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-07-23T12:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:grasstrack ;
+	ikos:hasObject aspfacetvalue:flat-racing ;
+	ikos:hasObject aspfacetvalue:steeplechase ;
+	ikos:hasObject aspfacetvalue:trotting ;
+	ikos:hasObject aspfacetvalue:harnessracing .
+
+aspfacet:fencingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"fencing type"@en-GB ;
+	skos:definition	"A type of fencing style"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:foil ;
+	ikos:hasObject aspfacetvalue:sabre ;
+	ikos:isFacetOf medtop:20000929 ;
+	ikos:hasObject aspfacetvalue:epee .
+
+aspfacet:figureskatingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"figure skating type"@en-GB ;
+	skos:definition	"A type of figure skating competition"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:singles ;
+	ikos:hasObject aspfacetvalue:ice-dance ;
+	ikos:isFacetOf medtop:20000934 ;
+	ikos:hasObject aspfacetvalue:pairs .
+
+aspfacet:flyingdisctype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"flying disc type"@en-GB ;
+	skos:definition	"A type of flying disc competition"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:distance ;
+	ikos:hasObject aspfacetvalue:guts ;
+	ikos:isFacetOf medtop:20000938 ;
+	ikos:hasObject aspfacetvalue:accuracy ;
+	ikos:hasObject aspfacetvalue:MTA ;
+	ikos:hasObject aspfacetvalue:freestyle-flyingdisc ;
+	ikos:hasObject aspfacetvalue:disc-golf ;
+	ikos:hasObject aspfacetvalue:ultimate ;
+	ikos:hasObject aspfacetvalue:SCF ;
+	ikos:hasObject aspfacetvalue:discathon ;
+	ikos:hasObject aspfacetvalue:overall ;
+	ikos:hasObject aspfacetvalue:TRC ;
+	ikos:hasObject aspfacetvalue:DDC .
+
+aspfacet:freestyleskiingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"freestyle skiing type"@en-GB ;
+	skos:definition	"A type of freestyle skiing competition"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:aerials ;
+	ikos:hasObject aspfacetvalue:artistic-skiing ;
+	ikos:hasObject aspfacetvalue:moguls ;
+	ikos:hasObject aspfacetvalue:ski-cross ;
+	ikos:isFacetOf medtop:20001058 .
+
+aspfacet:gender
+	rdf:type skos:Concept ;
+	skos:prefLabel	"gender"@en-GB ;
+	skos:definition	"The gender categories as defined by the governing body of the sport"@en-GB ;
+	skos:note	"This facet can be applied to any Media Topic that is a child or grandchild of sport competition discipline (medtop: 20000822)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:women ;
+	ikos:hasObject aspfacetvalue:men ;
+	ikos:hasObject aspfacetvalue:mixed ;
+	ikos:isFacetOf medtop:20000822 .
+
+aspfacet:jaialaitype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"jai alai type"@en-GB ;
+	skos:definition	"A type of fronton/pelota/jai alai"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:trinquet ;
+	ikos:hasObject aspfacetvalue:chistera-corta ;
+	ikos:hasObject aspfacetvalue:pala-corta ;
+	ikos:hasObject aspfacetvalue:chistera-ancha ;
+	ikos:hasObject aspfacetvalue:fronton ;
+	ikos:hasObject aspfacetvalue:bare-hand ;
+	ikos:hasObject aspfacetvalue:rebot ;
+	ikos:hasObject aspfacetvalue:left-wall ;
+	ikos:hasObject aspfacetvalue:pala-ancha ;
+	ikos:hasObject aspfacetvalue:pasaka ;
+	ikos:hasObject aspfacetvalue:xare ;
+	ikos:isFacetOf medtop:20000968 .
+
+aspfacet:motorcarracingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"motor car racing type"@en-GB ;
+	skos:definition	"A type of motor car race"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:endurance-motorracing ;
+	ikos:hasObject aspfacetvalue:folkrace ;
+	ikos:hasObject aspfacetvalue:formulaone ;
+	ikos:hasObject aspfacetvalue:indyracing ;
+	ikos:hasObject aspfacetvalue:kart-racing ;
+	ikos:hasObject aspfacetvalue:rallycross ;
+	ikos:hasObject aspfacetvalue:rallying ;
+	ikos:hasObject aspfacetvalue:F3000 ;
+	ikos:isFacetOf medtop:20000991 .
+
+aspfacet:motorcyclingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"motorcycling type"@en-GB ;
+	skos:definition	"A type of motorcycling event"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:isFacetOf medtop:20000998 ;
+	ikos:hasObject aspfacetvalue:motoGP ;
+	ikos:hasObject aspfacetvalue:endurance-motorcycling ;
+	ikos:hasObject aspfacetvalue:enduro ;
+	ikos:hasObject aspfacetvalue:grandprix ;
+	ikos:hasObject aspfacetvalue:moto-cross ;
+	ikos:hasObject aspfacetvalue:side-cars ;
+	ikos:hasObject aspfacetvalue:supercross ;
+	ikos:hasObject aspfacetvalue:speedway ;
+	ikos:hasObject aspfacetvalue:moto-ball .
+
+aspfacet:mountainbikingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"mountain biking type"@en-GB ;
+	skos:definition	"A type of mountain biking event"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:vtt-downhill ;
+	ikos:hasObject aspfacetvalue:vtt-cross ;
+	ikos:isFacetOf medtop:20000903 .
+
+aspfacet:nordicskiingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"nordic skiing type"@en-GB ;
+	skos:definition	"A type of nordic skiing competition"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-08-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-08-02T12:00:00+00:00"^^xsd:dateTime  ; 
+	ikos:retired "2019-08-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:isFacetOf medtop:20001060 .
+
+aspfacet:crosscountryskiingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"cross country skiing type"@en-GB ;
+	skos:definition	"A type of cross country skiing competition"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2019-08-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-08-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-08-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-08-02T12:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:classic ;
+	ikos:hasObject aspfacetvalue:combined-nordicskiing ;
+	ikos:hasObject aspfacetvalue:skiathlon ;
+	ikos:hasObject aspfacetvalue:teamsprint-nordicskiing ;
+	ikos:hasObject aspfacetvalue:skating-freestyle ;
+	ikos:isFacetOf medtop:20001149 .
+
+aspfacet:parasport
+	rdf:type skos:Concept ;
+	skos:prefLabel	"parasport"@en-GB ;
+	skos:definition	"Indicates that the sport is a sport for people with disabilities"@en-GB ;
+	skos:note	"This facet can be applied to any Media Topic that is a child or grandchild of sport competition discipline (medtop:20000822)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:isFacetOf medtop:20000822 .
+
+aspfacet:parasporttype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"parasport type"@en-GB ;
+	skos:definition	"Indicates the type of parasport"@en-GB ;
+	skos:note	"This facet can be applied to any Media Topic that is a child or grandchild of sport competition discipline (medtop:20000822)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:isFacetOf medtop:20000822 .
+
+aspfacet:platformheight
+	rdf:type skos:Concept ;
+	skos:prefLabel	"height of platform"@en-GB ;
+	skos:definition	"The height of the platform used for diving, etc."@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:isFacetOf medtop:20000916 ;
+	ikos:isFacetOf medtop:20000915 ;
+	ikos:isFacetOf medtop:20000914 .
+
+aspfacet:racetime
+	rdf:type skos:Concept ;
+	skos:prefLabel	"race time"@en-GB ;
+	skos:definition	"The temporal limit of a race"@en-GB ;
+	skos:note	"This facet can be applied to any Media Topic that is a child or grandchild of sport competition discipline (medtop:20000822)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:isFacetOf medtop:20000822 .
+
+aspfacet:racetype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"race type"@en-GB ;
+	skos:definition	"A race type used across many different sports"@en-GB ;
+	skos:note	"This facet can be applied to any Media Topic that is a child or grandchild of sport competition discipline (medtop:20000822)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:cross-country-race ;
+	ikos:hasObject aspfacetvalue:massstart ;
+	ikos:hasObject aspfacetvalue:pursuit ;
+	ikos:hasObject aspfacetvalue:trial ;
+	ikos:hasObject aspfacetvalue:relay ;
+	ikos:hasObject aspfacetvalue:staged ;
+	ikos:isFacetOf medtop:20000822 ;
+	ikos:hasObject aspfacetvalue:sprint ;
+	ikos:hasObject aspfacetvalue:time-trial .
+
+aspfacet:rhythmgymtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"rhythmic gymnastics type"@en-GB ;
+	skos:definition	"A type of rhythmic gymnastics competition"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:hoop ;
+	ikos:hasObject aspfacetvalue:rope ;
+	ikos:isFacetOf medtop:20000951 ;
+	ikos:hasObject aspfacetvalue:ball ;
+	ikos:hasObject aspfacetvalue:clubs ;
+	ikos:hasObject aspfacetvalue:ribbon .
+
+aspfacet:rowingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"rowing type"@en-GB ;
+	skos:definition	"A type of rowing style"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:sculls ;
+	ikos:hasObject aspfacetvalue:coxless ;
+	ikos:hasObject aspfacetvalue:lightweight ;
+	ikos:isFacetOf medtop:20001026 .
+
+aspfacet:sailingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"sailing type"@en-GB ;
+	skos:definition	"A type of sailing designated by boat class"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:around-the-world ;
+	ikos:hasObject aspfacetvalue:star ;
+	ikos:hasObject aspfacetvalue:505 ;
+	ikos:hasObject aspfacetvalue:yngling ;
+	ikos:hasObject aspfacetvalue:470 ;
+	ikos:hasObject aspfacetvalue:mistral ;
+	ikos:hasObject aspfacetvalue:laser ;
+	ikos:hasObject aspfacetvalue:monohull ;
+	ikos:hasObject aspfacetvalue:flying-dutchman ;
+	ikos:hasObject aspfacetvalue:49er ;
+	ikos:hasObject aspfacetvalue:soling ;
+	ikos:isFacetOf medtop:20001038 ;
+	ikos:hasObject aspfacetvalue:tornado ;
+	ikos:hasObject aspfacetvalue:europe ;
+	ikos:hasObject aspfacetvalue:finn ;
+	ikos:hasObject aspfacetvalue:multihulls .
+
+aspfacet:shootingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"shooting type"@en-GB ;
+	skos:definition	"A type of competitive shooting event"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:running-target ;
+	ikos:hasObject aspfacetvalue:rapid-fire-pistol ;
+	ikos:hasObject aspfacetvalue:rifle-3-positions ;
+	ikos:hasObject aspfacetvalue:air-rifle ;
+	ikos:hasObject aspfacetvalue:trap ;
+	ikos:hasObject aspfacetvalue:double-trap ;
+	ikos:isFacetOf medtop:20001049 ;
+	ikos:hasObject aspfacetvalue:rifle-prone ;
+	ikos:hasObject aspfacetvalue:skeet ;
+	ikos:hasObject aspfacetvalue:pistol ;
+	ikos:hasObject aspfacetvalue:air-pistol .
+
+aspfacet:soccertype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"soccer type"@en-GB ;
+	skos:definition	"A type of soccer/football"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2019-11-25T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-11-25T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-11-25T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-11-25T12:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:beach-football ;
+	ikos:hasObject aspfacetvalue:futsal ;
+	ikos:hasObject aspfacetvalue:indoor-soccer .
+
+aspfacet:snowboardingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"snowboarding type"@en-GB ;
+	skos:definition	"A type of snowboarding competition"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:big-air-snowboarding ;
+	ikos:hasObject aspfacetvalue:giantslalom-snowboarding ;
+	ikos:hasObject aspfacetvalue:halfpipe-snowboarding ;
+	ikos:hasObject aspfacetvalue:parallelslalom-snowboarding ;
+	ikos:hasObject aspfacetvalue:slalom-snowboarding ;
+	ikos:hasObject aspfacetvalue:snowboard-cross ;
+	ikos:isFacetOf medtop:20001064 .
+
+aspfacet:swimmingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"swimming type"@en-GB ;
+	skos:definition	"A type of swimming competition"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:isFacetOf medtop:20001071 ;
+	ikos:hasObject aspfacetvalue:butterfly ;
+	ikos:hasObject aspfacetvalue:medley ;
+	ikos:hasObject aspfacetvalue:backstroke ;
+	ikos:hasObject aspfacetvalue:marathon ;
+	ikos:hasObject aspfacetvalue:shortcourse ;
+	ikos:hasObject aspfacetvalue:breaststroke ;
+	ikos:hasObject aspfacetvalue:freestyle-swimming .
+
+aspfacet:teamsize
+	rdf:type skos:Concept ;
+	skos:prefLabel	" team size"@en-GB ;
+	skos:definition	"The number of people on a team involved in the sporting event."@en-GB ;
+	skos:note	"This facet can be applied to any Media Topic that is a child or grandchild of sport competition discipline (medtop:20000822)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:isFacetOf medtop:20000822 .
+
+aspfacet:waterskiingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"water skiing type"@en-GB ;
+	skos:definition	"A type of water skiing event"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:jump ;
+	ikos:hasObject aspfacetvalue:trick ;
+	ikos:isFacetOf medtop:20001092 ;
+	ikos:hasObject aspfacetvalue:slalom-waterskiing ;
+	ikos:hasObject aspfacetvalue:combined-waterskiing .
+
+aspfacet:weightclasstype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"weight-class type"@en-GB ;
+	skos:definition	"The weight class of an athlete as defined by sport or federation. "@en-GB ;
+	skos:note	"This facet can take a string or scalar value. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:isFacetOf medtop:20001098 ;
+	ikos:isFacetOf medtop:20000969 ;
+	ikos:isFacetOf medtop:20000856 .
+
+aspfacet:weightliftingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"weightlifting type"@en-GB ;
+	skos:definition	"A type of weightlifting event"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:isFacetOf medtop:20001093 ;
+	ikos:hasObject aspfacetvalue:clean-and-jerk ;
+	ikos:hasObject aspfacetvalue:snatch ;
+	ikos:hasObject aspfacetvalue:powerlifting .
+
+aspfacet:windsurfingtype
+	rdf:type skos:Concept ;
+	skos:prefLabel	"windsurfing type"@en-GB ;
+	skos:definition	"A type of windsurfing race"@en-GB ;
+	skos:note	"This facet can take an associated value from the Sport Facet Value vocabulary (http://cv.iptc.org/newscodes/asportfacetvalue)."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/asportfacet/>  ;
+	ikos:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2017-05-04T14:00:00+00:00"^^xsd:dateTime  ;
+	ikos:hasObject aspfacetvalue:land ;
+	ikos:hasObject aspfacetvalue:lake ;
+	ikos:hasObject aspfacetvalue:river ;
+	ikos:isFacetOf medtop:20001097 ;
+	ikos:hasObject aspfacetvalue:ocean .

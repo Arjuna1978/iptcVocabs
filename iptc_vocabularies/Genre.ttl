@@ -1,0 +1,797 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix altidrole:  <http://cv.iptc.org/newscodes/altidrole/> .
+@prefix aoprop:  <http://cv.iptc.org/newscodes/aoproperty/> .
+@prefix app:  <http://cv.iptc.org/newscodes/application/> .
+@prefix aspfacet:  <http://cv.iptc.org/newscodes/asportfacet/> .
+@prefix aspfacetvalue:  <http://cv.iptc.org/newscodes/asportfacetvalue/> .
+@prefix acdc:  <http://cv.iptc.org/newscodes/audiocodec/> .
+@prefix catinat:  <http://cv.iptc.org/newscodes/catinature/> .
+@prefix chprop:  <http://cv.iptc.org/newscodes/characteristicsproperty/> .
+@prefix cinat:  <http://cv.iptc.org/newscodes/cinature/> .
+@prefix colsp:  <http://cv.iptc.org/newscodes/colorspace/> .
+@prefix colin:  <http://cv.iptc.org/newscodes/colourindicator/> .
+@prefix ctech:  <http://cv.iptc.org/newscodes/commtech/> .
+@prefix cptdefrole:  <http://cv.iptc.org/newscodes/conceptdefinitionrole/> .
+@prefix cptnoterole:  <http://cv.iptc.org/newscodes/conceptnoterole/> .
+@prefix cpprole: <http://cv.iptc.org/newscodes/contentprodpartyrole/> .
+@prefix crel:  <http://cv.iptc.org/newscodes/conceptrelation/> .
+@prefix conf:  <http://cv.iptc.org/newscodes/confidence/> .
+@prefix ciprol:  <http://cv.iptc.org/newscodes/contactinfopartrole/> .
+@prefix cwarn:  <http://cv.iptc.org/newscodes/contentwarning/> .
+@prefix ctrol:  <http://cv.iptc.org/newscodes/contributorrole/> .
+@prefix cpnat:  <http://cv.iptc.org/newscodes/cpnature/> .
+@prefix drol:  <http://cv.iptc.org/newscodes/descriptionrole/> .
+@prefix digsrctype:  <http://cv.iptc.org/newscodes/digitalsourcetype/> .
+@prefix dimensionunit:  <http://cv.iptc.org/newscodes/dimensionunit/> .
+@prefix ednoterole:  <http://cv.iptc.org/newscodes/ednoterole/> .
+@prefix dummy:  <http://cv.iptc.org/newscodes/dummy/> .
+@prefix erol:  <http://cv.iptc.org/newscodes/edrole/> .
+@prefix encd:  <http://cv.iptc.org/newscodes/encoding/> .
+@prefix entityprop:  <http://cv.iptc.org/newscodes/entityproperty/> .
+@prefix ecirol:  <http://cv.iptc.org/newscodes/eventcontactinforole/> .
+@prefix edconf:  <http://cv.iptc.org/newscodes/eventdateconfirm/> .
+@prefix eocstat:  <http://cv.iptc.org/newscodes/eventoccurstatus/> .
+@prefix eorol:  <http://cv.iptc.org/newscodes/eventorganiserrole/> .
+@prefix eprol:  <http://cv.iptc.org/newscodes/eventparticipantrole/> .
+@prefix eregrol:  <http://cv.iptc.org/newscodes/eventregrole/> .
+@prefix fisymtype:  <http://cv.iptc.org/newscodes/financialinstrumentsymboltype/> .
+@prefix frmt:  <http://cv.iptc.org/newscodes/format/> .
+@prefix gen:  <http://cv.iptc.org/newscodes/generic/> .
+@prefix genre:  <http://cv.iptc.org/newscodes/genre/> .
+@prefix hashscope:  <http://cv.iptc.org/newscodes/hashscope/> .
+@prefix hashtype:  <http://cv.iptc.org/newscodes/hashtype/> .
+@prefix hopaction:  <http://cv.iptc.org/newscodes/hopaction/> .
+@prefix hatarget:  <http://cv.iptc.org/newscodes/hopactiontarget/> .
+@prefix howextr:  <http://cv.iptc.org/newscodes/howextracted/> .
+@prefix howpr:  <http://cv.iptc.org/newscodes/howpresent/> .
+@prefix ikos:  <http://cv.iptc.org/newscodes/ikos/> .
+@prefix impt:  <http://cv.iptc.org/newscodes/importance/> .
+@prefix isrol:  <http://cv.iptc.org/newscodes/infosourcerole/> .
+@prefix irel:  <http://cv.iptc.org/newscodes/itemrelation/> .
+@prefix irep:  <http://cv.iptc.org/newscodes/itemrepresentation/> .
+@prefix lbtyp:  <http://cv.iptc.org/newscodes/labeltype/> .
+@prefix lrol:  <http://cv.iptc.org/newscodes/languagerole/> .
+@prefix loutorient:  <http://cv.iptc.org/newscodes/layoutorientation/> .
+@prefix loctyp:  <http://cv.iptc.org/newscodes/location/> .
+@prefix medtop:  <http://cv.iptc.org/newscodes/mediatopic/> .
+@prefix mtyp:  <http://cv.iptc.org/newscodes/mediatype/> .
+@prefix medtype:  <http://cv.iptc.org/newscodes/mediatype1/> .
+@prefix nprt:  <http://cv.iptc.org/newscodes/namepart/> .
+@prefix nrol:  <http://cv.iptc.org/newscodes/namerole/> .
+@prefix ncostat:  <http://cv.iptc.org/newscodes/newscoveragestatus/> .
+@prefix nityp:  <http://cv.iptc.org/newscodes/newsitemtype/> .
+@prefix nmsig:  <http://cv.iptc.org/newscodes/newsmsgsignal/> .
+@prefix nprod:  <http://cv.iptc.org/newscodes/newsproduct/> .
+@prefix nprov:  <http://cv.iptc.org/newscodes/newsprovider/> .
+@prefix ninat:  <http://cv.iptc.org/newscodes/ninature/> .
+@prefix not:  <http://cv.iptc.org/newscodes/notation/> .
+@prefix oito:  <http://cv.iptc.org/newscodes/ofinterestto/> .
+@prefix pgrmod:  <http://cv.iptc.org/newscodes/pkggroupmode/> .
+@prefix plinat:  <http://cv.iptc.org/newscodes/plinature/> .
+@prefix prio:  <http://cv.iptc.org/newscodes/priority/> .
+@prefix prodgenre:  <http://cv.iptc.org/newscodes/productgenre/> .
+@prefix prop:  <http://cv.iptc.org/newscodes/property/> .
+@prefix prov:  <http://cv.iptc.org/newscodes/provider/> .
+@prefix stat:  <http://cv.iptc.org/newscodes/pubstatusg2/> .
+@prefix rtype:  <http://cv.iptc.org/newscodes/ratertype/> .
+@prefix rcalctype:  <http://cv.iptc.org/newscodes/rcalctype/> .
+@prefix rel:  <http://cv.iptc.org/newscodes/relevance/> .
+@prefix rnd:  <http://cv.iptc.org/newscodes/rendition/> .
+@prefix riaspect:  <http://cv.iptc.org/newscodes/riaspect/> .
+@prefix rightsprop:  <http://cv.iptc.org/newscodes/rightsproperty/> .
+@prefix riscope:  <http://cv.iptc.org/newscodes/riscope/> .
+@prefix role1:  <http://cv.iptc.org/newscodes/role1/> .
+@prefix rscaleunit:  <http://cv.iptc.org/newscodes/rscaleunit/> .
+@prefix scn:  <http://cv.iptc.org/newscodes/scene/> .
+@prefix sev:  <http://cv.iptc.org/newscodes/severity/> .
+@prefix sig:  <http://cv.iptc.org/newscodes/signal/> .
+@prefix pst1:  <http://cv.iptc.org/newscodes/status1/> .
+@prefix subj:  <http://cv.iptc.org/newscodes/subjectcode/> .
+@prefix squ:  <http://cv.iptc.org/newscodes/subjectqualifier/> .
+@prefix timeunit:  <http://cv.iptc.org/newscodes/timeunit/> .
+@prefix tone:  <http://cv.iptc.org/newscodes/tone/> .
+@prefix tpctyp:  <http://cv.iptc.org/newscodes/topictype/> .
+@prefix trustindicator:  <http://cv.iptc.org/newscodes/trustindicator/> .
+@prefix urgy:  <http://cv.iptc.org/newscodes/urgency/> .
+@prefix useracttype:  <http://cv.iptc.org/newscodes/useractiontype/> .
+@prefix valfmt:  <http://cv.iptc.org/newscodes/valueformat/> .
+@prefix vcdc:  <http://cv.iptc.org/newscodes/videocodec/> .
+@prefix videodef:  <http://cv.iptc.org/newscodes/videodefinition/> .
+@prefix ivqu:  <http://cv.iptc.org/newscodes/videoqualifier/> .
+@prefix sov:  <http://cv.iptc.org/newscodes/videoscaling/> .
+@prefix why:  <http://cv.iptc.org/newscodes/whypresent/> .
+@prefix wldreg:  <http://cv.iptc.org/newscodes/worldregion/> .
+@prefix a1312cat:  <http://cvx.iptc.org/anpa1312-category/> .
+@prefix a1312prio:  <http://cvx.iptc.org/anpa1312-priority/> .
+@prefix a1312svc:  <http://cvx.iptc.org/anpa1312-servicelevel/> .
+@prefix a1312vers:  <http://cvx.iptc.org/anpa1312-version/> .
+@prefix bcp47:  <http://cvx.iptc.org/bcp47/> .
+@prefix cusip:  <http://cvx.iptc.org/cusip/> .
+@prefix gics:  <http://cvx.iptc.org/gics/> .
+@prefix isin:  <http://cvx.iptc.org/isin/> .
+@prefix mic:  <http://cvx.iptc.org/iso10383-mic/> .
+@prefix iso3166-1a2:  <http://cvx.iptc.org/iso3166-1a2/> .
+@prefix iso3166-1a3:  <http://cvx.iptc.org/iso3166-1a3/> .
+@prefix iso4217a:  <http://cvx.iptc.org/iso4217a/> .
+@prefix iso4217n:  <http://cvx.iptc.org/iso4217n/> .
+@prefix secst:  <http://cvx.iptc.org/secst/> .
+@prefix sedol:  <http://cvx.iptc.org/sedol/> .
+@prefix tidm:  <http://cvx.iptc.org/tidm/> .
+@prefix dbpedia:  <http://dbpedia.org/resource/> .
+@prefix mb-artist:  <http://musicbrainz.org/artist/> .
+@prefix mb-label:  <http://musicbrainz.org/label/> .
+@prefix mb-recording:  <http://musicbrainz.org/recording/> .
+@prefix mb-release:  <http://musicbrainz.org/release/> .
+@prefix mb-releasegroup:  <http://musicbrainz.org/release-group/> .
+@prefix mb-work:  <http://musicbrainz.org/work/> .
+@prefix geonames:  <http://sws.geonames.org/> .
+@prefix freebase:  <http://www.freebase.com> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix wikidata:  <http://www.wikidata.org/entity/> .
+
+
+<http://cv.iptc.org/newscodes/genre/> 
+	rdf:type skos:ConceptScheme ; 
+  ikos:prefSchemeAlias "genre" ;
+  ikos:authority "http://www.iptc.org" ;
+  dct:rightsHolder "IPTC, International Press Telecommunications Council - https://iptc.org" ;
+  ikos:licenceLink "http://creativecommons.org/licenses/by/4.0/" ;
+  ikos:dateReleased "2024-02-13T12:00:00+00:00"^^xsd:dateTime ;
+  dct:dateSubmitted "2024-02-13T12:00:00+00:00"^^xsd:dateTime ;
+  skos:prefLabel "Genre"@en-GB ;
+  skos:definition "Indicates a nature, journalistic or intellectual characteristic of an item. "@en-GB ;
+	skos:hasTopConcept		genre:Actuality ;
+	skos:hasTopConcept		genre:Advertiser_Supplied ;
+	skos:hasTopConcept		genre:Advice ;
+	skos:hasTopConcept		genre:Advisory ;
+	skos:hasTopConcept		genre:almanac ;
+	skos:hasTopConcept		genre:Analysis ;
+	skos:hasTopConcept		genre:Anniversary ;
+	skos:hasTopConcept		genre:Archive_material ;
+	skos:hasTopConcept		genre:Background ;
+	skos:hasTopConcept		genre:Behind_the_Story ;
+	skos:hasTopConcept		genre:Biography ;
+	skos:hasTopConcept		genre:Birth_Announcement ;
+	skos:hasTopConcept		genre:Current ;
+	skos:hasTopConcept		genre:Curtain_Raiser ;
+	skos:hasTopConcept		genre:Daybook ;
+	skos:hasTopConcept		genre:Exclusive ;
+	skos:hasTopConcept		genre:Fact_Check ;
+	skos:hasTopConcept		genre:Feature ;
+	skos:hasTopConcept		genre:Fixture ;
+	skos:hasTopConcept		genre:Forecast ;
+	skos:hasTopConcept		genre:From_the_Scene ;
+	skos:hasTopConcept		genre:Help_Us_to_Report ;
+	skos:hasTopConcept		genre:History ;
+	skos:hasTopConcept		genre:horoscope ;
+	skos:hasTopConcept		genre:Interview ;
+	skos:hasTopConcept		genre:ListingOfFacts ;
+	skos:hasTopConcept		genre:LiveCoverage ;
+	skos:hasTopConcept		genre:Music ;
+	skos:hasTopConcept		genre:Obituary ;
+	skos:hasTopConcept		genre:Opinion ;
+	skos:hasTopConcept		genre:Polls_and_Surveys ;
+	skos:hasTopConcept		genre:Press_Release ;
+	skos:hasTopConcept		genre:Press-Digest ;
+	skos:hasTopConcept		genre:Preview ;
+	skos:hasTopConcept		genre:Profile ;
+	skos:hasTopConcept		genre:Program ;
+	skos:hasTopConcept		genre:Question_and_Answer_Session ;
+	skos:hasTopConcept		genre:Quote ;
+	skos:hasTopConcept		genre:Raw_Sound ;
+	skos:hasTopConcept		genre:Response_to_a_Question ;
+	skos:hasTopConcept		genre:Results_Listings_and_Statistics ;
+	skos:hasTopConcept		genre:Retrospective ;
+	skos:hasTopConcept		genre:Review ;
+	skos:hasTopConcept		genre:Satire ;
+	skos:hasTopConcept		genre:Scener ;
+	skos:hasTopConcept		genre:Side_bar_and_supporting_information ;
+	skos:hasTopConcept		genre:Special_Report ;
+	skos:hasTopConcept		genre:Sponsored ;
+	skos:hasTopConcept		genre:Summary ;
+	skos:hasTopConcept		genre:Supported ;
+	skos:hasTopConcept		genre:Synopsis ;
+	skos:hasTopConcept		genre:Text_only ;
+	skos:hasTopConcept		genre:Transcript_and_Verbatim ;
+	skos:hasTopConcept		genre:UGC ;
+	skos:hasTopConcept		genre:Update ;
+	skos:hasTopConcept		genre:Voicer ;
+	skos:hasTopConcept		genre:Wrap ;
+	skos:hasTopConcept		genre:Wrapup .
+
+genre:Actuality
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Actuality"@en-GB ;
+	skos:definition	"Recording of an event"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Advertiser_Supplied
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Advertiser Supplied"@en-GB ;
+	skos:definition	"Content is supplied by an organisation or individual that has paid the news provider for its placement"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2020-04-07T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Advice
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Advice"@en-GB ;
+	skos:definition	"Letters and answers about readers' personal problems"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2002-07-15T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2002-07-15T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Advisory
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Advisory"@en-GB ;
+	skos:definition	"Recommendation on editorial or technical matters by a provider to its customers"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2012-10-04T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2012-10-04T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2012-10-04T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2012-10-04T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:almanac
+	rdf:type skos:Concept ;
+	skos:prefLabel	"On This Day"@en-GB ;
+	skos:definition	"List of data, including birthdays of famous people and items of historical significance, for a given day"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2006-08-21T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2006-08-21T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2020-05-10T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2020-05-10T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Analysis
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Analysis"@en-GB ;
+	skos:definition	"Data and conclusions drawn by a journalist who has conducted in depth research for a story"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Anniversary
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Anniversary"@en-GB ;
+	skos:definition	"Stories about the anniversary of some important event that took place in recent history, usually bringing a short review of the event itself. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2003-06-12T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2003-06-12T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-07-30T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-07-30T12:00:00+00:00"^^xsd:dateTime  ; 
+	ikos:retired "2019-07-30T12:00:00+00:00"^^xsd:dateTime .
+
+genre:Archive_material
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Archival material"@en-GB ;
+	skos:definition	"Material selected from the originator's archive that has been previously distributed"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2020-05-10T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2020-05-10T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Background
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Background"@en-GB ;
+	skos:definition	"Scene setting and explanation for an event being reported"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Behind_the_Story
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Behind the Story"@en-GB ;
+	skos:definition	"The content describes how a story was reported and offers context on the reporting"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2020-04-07T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Biography
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Biography"@en-GB ;
+	skos:definition	"Facts and background about a person"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2012-10-04T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2012-10-04T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2012-10-04T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2012-10-04T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Birth_Announcement
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Birth Announcement"@en-GB ;
+	skos:definition	"News of newly born children"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2019-07-30T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-07-30T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-07-30T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-07-30T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Current
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Current Events"@en-GB ;
+	skos:definition	"Content about events taking place at the time of the report"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2020-05-10T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2020-05-10T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Curtain_Raiser
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Curtain Raiser"@en-GB ;
+	skos:definition	"Information or kickoff piece for a live event that is about to take place"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Daybook
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Planner"@en-GB ;
+	skos:definition	"Items filed on a regular basis that are lists of upcoming events with time and place, designed to inform others of events for planning purposes, also known as daybook or agenda"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2002-07-15T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2002-07-15T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Exclusive
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Exclusive"@en-GB ;
+	skos:definition	"News reported by one journalist or news organisation before others, and of exceptional originality or importance"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2002-07-15T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2002-07-15T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Fact_Check
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Fact Check"@en-GB ;
+	skos:definition	"The news item looks into the truth or falsehood of another reported news item or assertion (for example a statement on social media by a public figure)"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2020-04-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2020-04-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2020-04-07T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Feature
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Feature"@en-GB ;
+	skos:definition	"Content about a particular event or individual that may not be significant to current breaking news"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Fixture
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Fixture"@en-GB ;
+	skos:definition	"Items published on a regular schedule, such as columns, cartoons, stock prices and weather forecasts"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Forecast
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Forecast"@en-GB ;
+	skos:definition	"Opinion as to the outcome of a future event"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:From_the_Scene
+	rdf:type skos:Concept ;
+	skos:prefLabel	"From the Scene"@en-GB ;
+	skos:definition	"Report from the location of an event"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Help_Us_to_Report
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Help us to Report"@en-GB ;
+	skos:definition	"The news item is a call for readers to provide information that may help journalists to investigate a potential news story"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2020-04-07T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:History
+	rdf:type skos:Concept ;
+	skos:prefLabel	"History"@en-GB ;
+	skos:definition	"The object content is based on previous rather than current events. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:horoscope
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Horoscope"@en-GB ;
+	skos:definition	"Astrological forecasts "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2006-08-21T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2006-08-21T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Interview
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Interview"@en-GB ;
+	skos:definition	"The report of a dialogue between a journalist and a news source or significant person"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:ListingOfFacts
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Fact Box"@en-GB ;
+	skos:definition	"Usually a sidebar that lists facts related to a topic or story"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2012-10-04T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2012-10-04T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2012-10-04T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2012-10-04T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:LiveCoverage
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Live Coverage"@en-GB ;
+	skos:definition	"News item containing ongoing, up to the minute coverage of a news event, such as a live blog or live video feed"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2021-04-28T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2021-04-28T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2021-04-28T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2021-04-28T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Music
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Music"@en-GB ;
+	skos:definition	"Content is solely music"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Obituary
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Obituary"@en-GB ;
+	skos:definition	"A narrative about an individual's life and achievements for publication after death"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Opinion
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Opinion"@en-GB ;
+	skos:definition	"Editorial comment that reflects the views of the author"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Polls_and_Surveys
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Polls and Surveys"@en-GB ;
+	skos:definition	"Numeric or other information produced as a result of questionnaires or interviews"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Press_Release
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Press Release"@en-GB ;
+	skos:definition	"Promotional material or information provided to a news organisation"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Press-Digest
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Press-Digest"@en-GB ;
+	skos:definition	"Roundup of news or editorial content from other sources, published in whole or in part without significant journalistic changes"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Preview
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Preview"@en-GB ;
+	skos:definition	"Content written ahead of an event, such as a preview of an upcoming summer movie"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2021-04-28T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2021-04-28T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2021-04-28T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2021-04-28T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Profile
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Profile"@en-GB ;
+	skos:definition	"Description of the life or activity of a news subject based on facts discovered through research and interviews"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Program
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Program"@en-GB ;
+	skos:definition	"A news item giving lists of intended events and time to be covered by the news provider. Each program covers a day, a week, a month or a year. The covered period is referenced as a keyword."@en-GB ;
+	skos:changeNote	"Retired 2021-04-28. Use Planner instead."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2002-07-15T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2002-07-15T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2021-04-28T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2021-04-28T12:00:00+00:00"^^xsd:dateTime  ; 
+	ikos:retired "2021-04-28T12:00:00+00:00"^^xsd:dateTime .
+
+genre:Question_and_Answer_Session
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Question and Answer Session"@en-GB ;
+	skos:definition	"An interview portrayed as a sequence of questions and answers"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Quote
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Quote"@en-GB ;
+	skos:definition	"Direct quote from a person "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Raw_Sound
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Raw Sound"@en-GB ;
+	skos:definition	"Content is unedited sound without voice"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Response_to_a_Question
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Response to a Question"@en-GB ;
+	skos:definition	"An audio recording of an individual's response to a question"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Results_Listings_and_Statistics
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Results Listings and Statistics"@en-GB ;
+	skos:definition	"Alphanumeric data suitable for presentation in tabular form"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Retrospective
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Retrospective"@en-GB ;
+	skos:definition	"Material that looks back on a specific period of time, such as a season, quarter, year or decade"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Review
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Review"@en-GB ;
+	skos:definition	"A critique of a creative activity or service (for example a book, a film or a restaurant)"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Satire
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Satire"@en-GB ;
+	skos:definition	"Uses exaggeration, irony, or humour to make a point; not intended to be understood as factual"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2020-04-07T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Scener
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Scener"@en-GB ;
+	skos:definition	"The object contains a description of the event circumstances. "@en-GB ;
+	skos:changeNote	"Retired 2021-04-28. Use From the Scene instead."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2021-04-28T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2021-04-28T12:00:00+00:00"^^xsd:dateTime  ; 
+	ikos:retired "2021-04-28T12:00:00+00:00"^^xsd:dateTime .
+
+genre:Side_bar_and_supporting_information
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Side bar and Supporting Information"@en-GB ;
+	skos:definition	"Related content that provides additional context or insight into a news event"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2004-08-18T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2004-08-18T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2021-04-28T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2021-04-28T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Special_Report
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Special Report"@en-GB ;
+	skos:definition	"In-depth examination of a single subject requiring extensive research, presented either as a single item or as a series of items"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2002-07-15T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2002-07-15T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Sponsored
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Sponsored"@en-GB ;
+	skos:definition	"Content is produced on behalf of an organisation or individual that has paid the news provider for production and may approve content publication"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2020-04-07T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Summary
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Briefing"@en-GB ;
+	skos:definition	"A summary of a number of news items"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2021-04-28T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2021-04-28T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Supported
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Supported"@en-GB ;
+	skos:definition	"Content is produced with financial support from an organisation or individual, yet not approved by the underwriter before or after publication"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2020-04-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2020-04-07T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Synopsis
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Synopsis"@en-GB ;
+	skos:definition	"A condensed version of a single news item"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Text_only
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Text only"@en-GB ;
+	skos:definition	"The object contains a transcription of text."@en-GB ;
+	skos:changeNote	"Retired 2021-04-28. Use Transcript and Verbatim instead."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  ; 
+	ikos:retired "2021-04-28T12:00:00+00:00"^^xsd:dateTime .
+
+genre:Transcript_and_Verbatim
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Transcript and Verbatim"@en-GB ;
+	skos:definition	"A word-for-word account of a discussion or briefing"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:UGC
+	rdf:type skos:Concept ;
+	skos:prefLabel	"User Generated Content"@en-GB ;
+	skos:definition	"Content providing firsthand evidence regarding an event that is captured by non-journalists who are witnesses of or participants in the event"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2024-02-13T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2024-02-13T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-02-13T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-02-13T12:00:00+00:00"^^xsd:dateTime  .
+
+genre:Update
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Update"@en-GB ;
+	skos:definition	"The object contains an intraday snapshot (as for electronic services) of a single news subject. "@en-GB ;
+	skos:changeNote	"Retired 2021-04-28. Use Synopsis or Briefing instead."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  ; 
+	ikos:retired "2021-04-28T12:00:00+00:00"^^xsd:dateTime .
+
+genre:Voicer
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Voicer"@en-GB ;
+	skos:definition	"Content is only voice"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  .
+
+genre:Wrap
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Wrap"@en-GB ;
+	skos:definition	"Complete summary of an event"@en-GB ;
+	skos:changeNote	"Retired 2021-04-28. Use Synopsis or Briefing instead."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  ; 
+	ikos:retired "2021-04-28T12:00:00+00:00"^^xsd:dateTime .
+
+genre:Wrapup
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Wrapup"@en-GB ;
+	skos:definition	"Recap of a running story"@en-GB ;
+	skos:changeNote	"Retired 2021-04-28. Use Synopsis or Briefing instead."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/genre/>  ;
+	ikos:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2000-10-06T02:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:10:01+00:00"^^xsd:dateTime  ; 
+	ikos:retired "2021-04-28T12:00:00+00:00"^^xsd:dateTime .

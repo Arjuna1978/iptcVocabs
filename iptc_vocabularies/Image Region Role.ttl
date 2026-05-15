@@ -1,0 +1,295 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix altidrole:  <http://cv.iptc.org/newscodes/altidrole/> .
+@prefix aoprop:  <http://cv.iptc.org/newscodes/aoproperty/> .
+@prefix app:  <http://cv.iptc.org/newscodes/application/> .
+@prefix aspfacet:  <http://cv.iptc.org/newscodes/asportfacet/> .
+@prefix aspfacetvalue:  <http://cv.iptc.org/newscodes/asportfacetvalue/> .
+@prefix acdc:  <http://cv.iptc.org/newscodes/audiocodec/> .
+@prefix catinat:  <http://cv.iptc.org/newscodes/catinature/> .
+@prefix chprop:  <http://cv.iptc.org/newscodes/characteristicsproperty/> .
+@prefix cinat:  <http://cv.iptc.org/newscodes/cinature/> .
+@prefix colsp:  <http://cv.iptc.org/newscodes/colorspace/> .
+@prefix colin:  <http://cv.iptc.org/newscodes/colourindicator/> .
+@prefix ctech:  <http://cv.iptc.org/newscodes/commtech/> .
+@prefix cptdefrole:  <http://cv.iptc.org/newscodes/conceptdefinitionrole/> .
+@prefix cptnoterole:  <http://cv.iptc.org/newscodes/conceptnoterole/> .
+@prefix cpprole: <http://cv.iptc.org/newscodes/contentprodpartyrole/> .
+@prefix crel:  <http://cv.iptc.org/newscodes/conceptrelation/> .
+@prefix conf:  <http://cv.iptc.org/newscodes/confidence/> .
+@prefix ciprol:  <http://cv.iptc.org/newscodes/contactinfopartrole/> .
+@prefix cwarn:  <http://cv.iptc.org/newscodes/contentwarning/> .
+@prefix ctrol:  <http://cv.iptc.org/newscodes/contributorrole/> .
+@prefix cpnat:  <http://cv.iptc.org/newscodes/cpnature/> .
+@prefix drol:  <http://cv.iptc.org/newscodes/descriptionrole/> .
+@prefix digsrctype:  <http://cv.iptc.org/newscodes/digitalsourcetype/> .
+@prefix dimensionunit:  <http://cv.iptc.org/newscodes/dimensionunit/> .
+@prefix ednoterole:  <http://cv.iptc.org/newscodes/ednoterole/> .
+@prefix dummy:  <http://cv.iptc.org/newscodes/dummy/> .
+@prefix erol:  <http://cv.iptc.org/newscodes/edrole/> .
+@prefix encd:  <http://cv.iptc.org/newscodes/encoding/> .
+@prefix entityprop:  <http://cv.iptc.org/newscodes/entityproperty/> .
+@prefix ecirol:  <http://cv.iptc.org/newscodes/eventcontactinforole/> .
+@prefix edconf:  <http://cv.iptc.org/newscodes/eventdateconfirm/> .
+@prefix eocstat:  <http://cv.iptc.org/newscodes/eventoccurstatus/> .
+@prefix eorol:  <http://cv.iptc.org/newscodes/eventorganiserrole/> .
+@prefix eprol:  <http://cv.iptc.org/newscodes/eventparticipantrole/> .
+@prefix eregrol:  <http://cv.iptc.org/newscodes/eventregrole/> .
+@prefix fisymtype:  <http://cv.iptc.org/newscodes/financialinstrumentsymboltype/> .
+@prefix frmt:  <http://cv.iptc.org/newscodes/format/> .
+@prefix gen:  <http://cv.iptc.org/newscodes/generic/> .
+@prefix genre:  <http://cv.iptc.org/newscodes/genre/> .
+@prefix hashscope:  <http://cv.iptc.org/newscodes/hashscope/> .
+@prefix hashtype:  <http://cv.iptc.org/newscodes/hashtype/> .
+@prefix hopaction:  <http://cv.iptc.org/newscodes/hopaction/> .
+@prefix hatarget:  <http://cv.iptc.org/newscodes/hopactiontarget/> .
+@prefix howextr:  <http://cv.iptc.org/newscodes/howextracted/> .
+@prefix howpr:  <http://cv.iptc.org/newscodes/howpresent/> .
+@prefix ikos:  <http://cv.iptc.org/newscodes/ikos/> .
+@prefix impt:  <http://cv.iptc.org/newscodes/importance/> .
+@prefix isrol:  <http://cv.iptc.org/newscodes/infosourcerole/> .
+@prefix irel:  <http://cv.iptc.org/newscodes/itemrelation/> .
+@prefix irep:  <http://cv.iptc.org/newscodes/itemrepresentation/> .
+@prefix lbtyp:  <http://cv.iptc.org/newscodes/labeltype/> .
+@prefix lrol:  <http://cv.iptc.org/newscodes/languagerole/> .
+@prefix loutorient:  <http://cv.iptc.org/newscodes/layoutorientation/> .
+@prefix loctyp:  <http://cv.iptc.org/newscodes/location/> .
+@prefix medtop:  <http://cv.iptc.org/newscodes/mediatopic/> .
+@prefix mtyp:  <http://cv.iptc.org/newscodes/mediatype/> .
+@prefix medtype:  <http://cv.iptc.org/newscodes/mediatype1/> .
+@prefix nprt:  <http://cv.iptc.org/newscodes/namepart/> .
+@prefix nrol:  <http://cv.iptc.org/newscodes/namerole/> .
+@prefix ncostat:  <http://cv.iptc.org/newscodes/newscoveragestatus/> .
+@prefix nityp:  <http://cv.iptc.org/newscodes/newsitemtype/> .
+@prefix nmsig:  <http://cv.iptc.org/newscodes/newsmsgsignal/> .
+@prefix nprod:  <http://cv.iptc.org/newscodes/newsproduct/> .
+@prefix nprov:  <http://cv.iptc.org/newscodes/newsprovider/> .
+@prefix ninat:  <http://cv.iptc.org/newscodes/ninature/> .
+@prefix not:  <http://cv.iptc.org/newscodes/notation/> .
+@prefix oito:  <http://cv.iptc.org/newscodes/ofinterestto/> .
+@prefix pgrmod:  <http://cv.iptc.org/newscodes/pkggroupmode/> .
+@prefix plinat:  <http://cv.iptc.org/newscodes/plinature/> .
+@prefix prio:  <http://cv.iptc.org/newscodes/priority/> .
+@prefix prodgenre:  <http://cv.iptc.org/newscodes/productgenre/> .
+@prefix prop:  <http://cv.iptc.org/newscodes/property/> .
+@prefix prov:  <http://cv.iptc.org/newscodes/provider/> .
+@prefix stat:  <http://cv.iptc.org/newscodes/pubstatusg2/> .
+@prefix rtype:  <http://cv.iptc.org/newscodes/ratertype/> .
+@prefix rcalctype:  <http://cv.iptc.org/newscodes/rcalctype/> .
+@prefix rel:  <http://cv.iptc.org/newscodes/relevance/> .
+@prefix rnd:  <http://cv.iptc.org/newscodes/rendition/> .
+@prefix riaspect:  <http://cv.iptc.org/newscodes/riaspect/> .
+@prefix rightsprop:  <http://cv.iptc.org/newscodes/rightsproperty/> .
+@prefix riscope:  <http://cv.iptc.org/newscodes/riscope/> .
+@prefix role1:  <http://cv.iptc.org/newscodes/role1/> .
+@prefix rscaleunit:  <http://cv.iptc.org/newscodes/rscaleunit/> .
+@prefix scn:  <http://cv.iptc.org/newscodes/scene/> .
+@prefix sev:  <http://cv.iptc.org/newscodes/severity/> .
+@prefix sig:  <http://cv.iptc.org/newscodes/signal/> .
+@prefix pst1:  <http://cv.iptc.org/newscodes/status1/> .
+@prefix subj:  <http://cv.iptc.org/newscodes/subjectcode/> .
+@prefix squ:  <http://cv.iptc.org/newscodes/subjectqualifier/> .
+@prefix timeunit:  <http://cv.iptc.org/newscodes/timeunit/> .
+@prefix tone:  <http://cv.iptc.org/newscodes/tone/> .
+@prefix tpctyp:  <http://cv.iptc.org/newscodes/topictype/> .
+@prefix trustindicator:  <http://cv.iptc.org/newscodes/trustindicator/> .
+@prefix urgy:  <http://cv.iptc.org/newscodes/urgency/> .
+@prefix useracttype:  <http://cv.iptc.org/newscodes/useractiontype/> .
+@prefix valfmt:  <http://cv.iptc.org/newscodes/valueformat/> .
+@prefix vcdc:  <http://cv.iptc.org/newscodes/videocodec/> .
+@prefix videodef:  <http://cv.iptc.org/newscodes/videodefinition/> .
+@prefix ivqu:  <http://cv.iptc.org/newscodes/videoqualifier/> .
+@prefix sov:  <http://cv.iptc.org/newscodes/videoscaling/> .
+@prefix why:  <http://cv.iptc.org/newscodes/whypresent/> .
+@prefix wldreg:  <http://cv.iptc.org/newscodes/worldregion/> .
+@prefix a1312cat:  <http://cvx.iptc.org/anpa1312-category/> .
+@prefix a1312prio:  <http://cvx.iptc.org/anpa1312-priority/> .
+@prefix a1312svc:  <http://cvx.iptc.org/anpa1312-servicelevel/> .
+@prefix a1312vers:  <http://cvx.iptc.org/anpa1312-version/> .
+@prefix bcp47:  <http://cvx.iptc.org/bcp47/> .
+@prefix cusip:  <http://cvx.iptc.org/cusip/> .
+@prefix gics:  <http://cvx.iptc.org/gics/> .
+@prefix isin:  <http://cvx.iptc.org/isin/> .
+@prefix mic:  <http://cvx.iptc.org/iso10383-mic/> .
+@prefix iso3166-1a2:  <http://cvx.iptc.org/iso3166-1a2/> .
+@prefix iso3166-1a3:  <http://cvx.iptc.org/iso3166-1a3/> .
+@prefix iso4217a:  <http://cvx.iptc.org/iso4217a/> .
+@prefix iso4217n:  <http://cvx.iptc.org/iso4217n/> .
+@prefix secst:  <http://cvx.iptc.org/secst/> .
+@prefix sedol:  <http://cvx.iptc.org/sedol/> .
+@prefix tidm:  <http://cvx.iptc.org/tidm/> .
+@prefix dbpedia:  <http://dbpedia.org/resource/> .
+@prefix mb-artist:  <http://musicbrainz.org/artist/> .
+@prefix mb-label:  <http://musicbrainz.org/label/> .
+@prefix mb-recording:  <http://musicbrainz.org/recording/> .
+@prefix mb-release:  <http://musicbrainz.org/release/> .
+@prefix mb-releasegroup:  <http://musicbrainz.org/release-group/> .
+@prefix mb-work:  <http://musicbrainz.org/work/> .
+@prefix geonames:  <http://sws.geonames.org/> .
+@prefix freebase:  <http://www.freebase.com> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix wikidata:  <http://www.wikidata.org/entity/> .
+
+
+<http://cv.iptc.org/newscodes/imageregionrole/> 
+	rdf:type skos:ConceptScheme ; 
+  ikos:prefSchemeAlias "imgregrole" ;
+  ikos:authority "http://www.iptc.org" ;
+  dct:rightsHolder "IPTC, International Press Telecommunications Council - https://iptc.org" ;
+  ikos:licenceLink "http://creativecommons.org/licenses/by/4.0/" ;
+  ikos:dateReleased "2025-03-31T12:00:00+00:00"^^xsd:dateTime ;
+  dct:dateSubmitted "2025-03-31T12:00:00+00:00"^^xsd:dateTime ;
+  skos:prefLabel "Image Region Role"@en-GB ;
+  skos:definition "Role of an image region among other image regions of the same image or other images"@en-GB ;
+	skos:hasTopConcept		imgregrole:cropping ;
+	skos:hasTopConcept		imgregrole:recomCropping ;
+	skos:hasTopConcept		imgregrole:landscapeCropping ;
+	skos:hasTopConcept		imgregrole:portraitCropping ;
+	skos:hasTopConcept		imgregrole:squareCropping ;
+	skos:hasTopConcept		imgregrole:compositeImageItem ;
+	skos:hasTopConcept		imgregrole:copyrightRegion ;
+	skos:hasTopConcept		imgregrole:subjectArea ;
+	skos:hasTopConcept		imgregrole:mainSubjectArea ;
+	skos:hasTopConcept		imgregrole:areaOfInterest ;
+	skos:hasTopConcept		imgregrole:anonymised ;
+	skos:hasTopConcept		imgregrole:recommendedAnonymisation ;
+	skos:hasTopConcept		imgregrole:businessUse .
+
+imgregrole:cropping
+	rdf:type skos:Concept ;
+	skos:prefLabel	"cropping"@en-GB ;
+	skos:definition	"Image region can be used for any cropping"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/imageregionrole/>  ;
+	ikos:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime  .
+
+imgregrole:recomCropping
+	rdf:type skos:Concept ;
+	skos:prefLabel	"recommended cropping"@en-GB ;
+	skos:definition	"Image region is recommended for cropping"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/imageregionrole/>  ;
+	ikos:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime  .
+
+imgregrole:landscapeCropping
+	rdf:type skos:Concept ;
+	skos:prefLabel	"landscape format cropping"@en-GB ;
+	skos:definition	"Image region suggested for cropping in landscape format"@en-GB ;
+	skos:note	"Use for images of non-landscape format"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/imageregionrole/>  ;
+	ikos:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime  .
+
+imgregrole:portraitCropping
+	rdf:type skos:Concept ;
+	skos:prefLabel	"portrait format cropping"@en-GB ;
+	skos:definition	"Image region suggested for cropping in portrait format"@en-GB ;
+	skos:note	"Use for images of non-portrait format"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/imageregionrole/>  ;
+	ikos:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime  .
+
+imgregrole:squareCropping
+	rdf:type skos:Concept ;
+	skos:prefLabel	"square format cropping"@en-GB ;
+	skos:definition	"Image region suggested for cropping in square format"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/imageregionrole/>  ;
+	ikos:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime  .
+
+imgregrole:compositeImageItem
+	rdf:type skos:Concept ;
+	skos:prefLabel	"composite image item"@en-GB ;
+	skos:definition	"Image region of an item in a composite image"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/imageregionrole/>  ;
+	ikos:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime  .
+
+imgregrole:copyrightRegion
+	rdf:type skos:Concept ;
+	skos:prefLabel	"copyright region"@en-GB ;
+	skos:definition	"Image region with a copyright different from the copyright of the whole picture"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/imageregionrole/>  ;
+	ikos:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime  .
+
+imgregrole:subjectArea
+	rdf:type skos:Concept ;
+	skos:prefLabel	"subject area"@en-GB ;
+	skos:definition	"Image region contains a subject in the overall scene."@en-GB ;
+	skos:note	"Multiple regions of an image may be set as subject area."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/imageregionrole/>  ;
+	ikos:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime  .
+
+imgregrole:mainSubjectArea
+	rdf:type skos:Concept ;
+	skos:prefLabel	"main subject area"@en-GB ;
+	skos:definition	"Image region contains the main subject in the overall scene. Same as the Exif SubjectArea."@en-GB ;
+	skos:note	"Only a single region of an image may be set as main subject area."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/imageregionrole/>  ;
+	ikos:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime  .
+
+imgregrole:areaOfInterest
+	rdf:type skos:Concept ;
+	skos:prefLabel	"area of interest"@en-GB ;
+	skos:definition	"Image region contains a thing of special interest to the viewer"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/imageregionrole/>  ;
+	ikos:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime  .
+
+imgregrole:anonymised
+	rdf:type skos:Concept ;
+	skos:prefLabel	"anonymised"@en-GB ;
+	skos:definition	"Image region obfuscates a person or object which should not be identifiable by this image"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/imageregionrole/>  ;
+	ikos:created "2025-03-31T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2025-03-31T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2025-03-31T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2025-03-31T12:00:00+00:00"^^xsd:dateTime  .
+
+imgregrole:recommendedAnonymisation
+	rdf:type skos:Concept ;
+	skos:prefLabel	"recommended anonymisation"@en-GB ;
+	skos:definition	"Image Region should obfuscate a person or object which should not be identifiable by this image in an upcoming workflow step"@en-GB ;
+	skos:note	"Obfuscation may be required for protecting privacy, security, or for legal reasons before making an image public."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/imageregionrole/>  ;
+	ikos:created "2025-03-31T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2025-03-31T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2025-03-31T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2025-03-31T12:00:00+00:00"^^xsd:dateTime  .
+
+imgregrole:businessUse
+	rdf:type skos:Concept ;
+	skos:prefLabel	"business use"@en-GB ;
+	skos:definition	"Image region is dedicated to a specific business use"@en-GB ;
+	skos:note	"In addition a more granular role could be expressed by a term of a role CV of this business."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/imageregionrole/>  ;
+	ikos:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime  .

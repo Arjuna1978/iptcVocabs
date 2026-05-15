@@ -1,0 +1,531 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix altidrole:  <http://cv.iptc.org/newscodes/altidrole/> .
+@prefix aoprop:  <http://cv.iptc.org/newscodes/aoproperty/> .
+@prefix app:  <http://cv.iptc.org/newscodes/application/> .
+@prefix aspfacet:  <http://cv.iptc.org/newscodes/asportfacet/> .
+@prefix aspfacetvalue:  <http://cv.iptc.org/newscodes/asportfacetvalue/> .
+@prefix acdc:  <http://cv.iptc.org/newscodes/audiocodec/> .
+@prefix catinat:  <http://cv.iptc.org/newscodes/catinature/> .
+@prefix chprop:  <http://cv.iptc.org/newscodes/characteristicsproperty/> .
+@prefix cinat:  <http://cv.iptc.org/newscodes/cinature/> .
+@prefix colsp:  <http://cv.iptc.org/newscodes/colorspace/> .
+@prefix colin:  <http://cv.iptc.org/newscodes/colourindicator/> .
+@prefix ctech:  <http://cv.iptc.org/newscodes/commtech/> .
+@prefix cptdefrole:  <http://cv.iptc.org/newscodes/conceptdefinitionrole/> .
+@prefix cptnoterole:  <http://cv.iptc.org/newscodes/conceptnoterole/> .
+@prefix cpprole: <http://cv.iptc.org/newscodes/contentprodpartyrole/> .
+@prefix crel:  <http://cv.iptc.org/newscodes/conceptrelation/> .
+@prefix conf:  <http://cv.iptc.org/newscodes/confidence/> .
+@prefix ciprol:  <http://cv.iptc.org/newscodes/contactinfopartrole/> .
+@prefix cwarn:  <http://cv.iptc.org/newscodes/contentwarning/> .
+@prefix ctrol:  <http://cv.iptc.org/newscodes/contributorrole/> .
+@prefix cpnat:  <http://cv.iptc.org/newscodes/cpnature/> .
+@prefix drol:  <http://cv.iptc.org/newscodes/descriptionrole/> .
+@prefix digsrctype:  <http://cv.iptc.org/newscodes/digitalsourcetype/> .
+@prefix dimensionunit:  <http://cv.iptc.org/newscodes/dimensionunit/> .
+@prefix ednoterole:  <http://cv.iptc.org/newscodes/ednoterole/> .
+@prefix dummy:  <http://cv.iptc.org/newscodes/dummy/> .
+@prefix erol:  <http://cv.iptc.org/newscodes/edrole/> .
+@prefix encd:  <http://cv.iptc.org/newscodes/encoding/> .
+@prefix entityprop:  <http://cv.iptc.org/newscodes/entityproperty/> .
+@prefix ecirol:  <http://cv.iptc.org/newscodes/eventcontactinforole/> .
+@prefix edconf:  <http://cv.iptc.org/newscodes/eventdateconfirm/> .
+@prefix eocstat:  <http://cv.iptc.org/newscodes/eventoccurstatus/> .
+@prefix eorol:  <http://cv.iptc.org/newscodes/eventorganiserrole/> .
+@prefix eprol:  <http://cv.iptc.org/newscodes/eventparticipantrole/> .
+@prefix eregrol:  <http://cv.iptc.org/newscodes/eventregrole/> .
+@prefix fisymtype:  <http://cv.iptc.org/newscodes/financialinstrumentsymboltype/> .
+@prefix frmt:  <http://cv.iptc.org/newscodes/format/> .
+@prefix gen:  <http://cv.iptc.org/newscodes/generic/> .
+@prefix genre:  <http://cv.iptc.org/newscodes/genre/> .
+@prefix hashscope:  <http://cv.iptc.org/newscodes/hashscope/> .
+@prefix hashtype:  <http://cv.iptc.org/newscodes/hashtype/> .
+@prefix hopaction:  <http://cv.iptc.org/newscodes/hopaction/> .
+@prefix hatarget:  <http://cv.iptc.org/newscodes/hopactiontarget/> .
+@prefix howextr:  <http://cv.iptc.org/newscodes/howextracted/> .
+@prefix howpr:  <http://cv.iptc.org/newscodes/howpresent/> .
+@prefix ikos:  <http://cv.iptc.org/newscodes/ikos/> .
+@prefix impt:  <http://cv.iptc.org/newscodes/importance/> .
+@prefix isrol:  <http://cv.iptc.org/newscodes/infosourcerole/> .
+@prefix irel:  <http://cv.iptc.org/newscodes/itemrelation/> .
+@prefix irep:  <http://cv.iptc.org/newscodes/itemrepresentation/> .
+@prefix lbtyp:  <http://cv.iptc.org/newscodes/labeltype/> .
+@prefix lrol:  <http://cv.iptc.org/newscodes/languagerole/> .
+@prefix loutorient:  <http://cv.iptc.org/newscodes/layoutorientation/> .
+@prefix loctyp:  <http://cv.iptc.org/newscodes/location/> .
+@prefix medtop:  <http://cv.iptc.org/newscodes/mediatopic/> .
+@prefix mtyp:  <http://cv.iptc.org/newscodes/mediatype/> .
+@prefix medtype:  <http://cv.iptc.org/newscodes/mediatype1/> .
+@prefix nprt:  <http://cv.iptc.org/newscodes/namepart/> .
+@prefix nrol:  <http://cv.iptc.org/newscodes/namerole/> .
+@prefix ncostat:  <http://cv.iptc.org/newscodes/newscoveragestatus/> .
+@prefix nityp:  <http://cv.iptc.org/newscodes/newsitemtype/> .
+@prefix nmsig:  <http://cv.iptc.org/newscodes/newsmsgsignal/> .
+@prefix nprod:  <http://cv.iptc.org/newscodes/newsproduct/> .
+@prefix nprov:  <http://cv.iptc.org/newscodes/newsprovider/> .
+@prefix ninat:  <http://cv.iptc.org/newscodes/ninature/> .
+@prefix not:  <http://cv.iptc.org/newscodes/notation/> .
+@prefix oito:  <http://cv.iptc.org/newscodes/ofinterestto/> .
+@prefix pgrmod:  <http://cv.iptc.org/newscodes/pkggroupmode/> .
+@prefix plinat:  <http://cv.iptc.org/newscodes/plinature/> .
+@prefix prio:  <http://cv.iptc.org/newscodes/priority/> .
+@prefix prodgenre:  <http://cv.iptc.org/newscodes/productgenre/> .
+@prefix prop:  <http://cv.iptc.org/newscodes/property/> .
+@prefix prov:  <http://cv.iptc.org/newscodes/provider/> .
+@prefix stat:  <http://cv.iptc.org/newscodes/pubstatusg2/> .
+@prefix rtype:  <http://cv.iptc.org/newscodes/ratertype/> .
+@prefix rcalctype:  <http://cv.iptc.org/newscodes/rcalctype/> .
+@prefix rel:  <http://cv.iptc.org/newscodes/relevance/> .
+@prefix rnd:  <http://cv.iptc.org/newscodes/rendition/> .
+@prefix riaspect:  <http://cv.iptc.org/newscodes/riaspect/> .
+@prefix rightsprop:  <http://cv.iptc.org/newscodes/rightsproperty/> .
+@prefix riscope:  <http://cv.iptc.org/newscodes/riscope/> .
+@prefix role1:  <http://cv.iptc.org/newscodes/role1/> .
+@prefix rscaleunit:  <http://cv.iptc.org/newscodes/rscaleunit/> .
+@prefix scn:  <http://cv.iptc.org/newscodes/scene/> .
+@prefix sev:  <http://cv.iptc.org/newscodes/severity/> .
+@prefix sig:  <http://cv.iptc.org/newscodes/signal/> .
+@prefix pst1:  <http://cv.iptc.org/newscodes/status1/> .
+@prefix subj:  <http://cv.iptc.org/newscodes/subjectcode/> .
+@prefix squ:  <http://cv.iptc.org/newscodes/subjectqualifier/> .
+@prefix timeunit:  <http://cv.iptc.org/newscodes/timeunit/> .
+@prefix tone:  <http://cv.iptc.org/newscodes/tone/> .
+@prefix tpctyp:  <http://cv.iptc.org/newscodes/topictype/> .
+@prefix trustindicator:  <http://cv.iptc.org/newscodes/trustindicator/> .
+@prefix urgy:  <http://cv.iptc.org/newscodes/urgency/> .
+@prefix useracttype:  <http://cv.iptc.org/newscodes/useractiontype/> .
+@prefix valfmt:  <http://cv.iptc.org/newscodes/valueformat/> .
+@prefix vcdc:  <http://cv.iptc.org/newscodes/videocodec/> .
+@prefix videodef:  <http://cv.iptc.org/newscodes/videodefinition/> .
+@prefix ivqu:  <http://cv.iptc.org/newscodes/videoqualifier/> .
+@prefix sov:  <http://cv.iptc.org/newscodes/videoscaling/> .
+@prefix why:  <http://cv.iptc.org/newscodes/whypresent/> .
+@prefix wldreg:  <http://cv.iptc.org/newscodes/worldregion/> .
+@prefix a1312cat:  <http://cvx.iptc.org/anpa1312-category/> .
+@prefix a1312prio:  <http://cvx.iptc.org/anpa1312-priority/> .
+@prefix a1312svc:  <http://cvx.iptc.org/anpa1312-servicelevel/> .
+@prefix a1312vers:  <http://cvx.iptc.org/anpa1312-version/> .
+@prefix bcp47:  <http://cvx.iptc.org/bcp47/> .
+@prefix cusip:  <http://cvx.iptc.org/cusip/> .
+@prefix gics:  <http://cvx.iptc.org/gics/> .
+@prefix isin:  <http://cvx.iptc.org/isin/> .
+@prefix mic:  <http://cvx.iptc.org/iso10383-mic/> .
+@prefix iso3166-1a2:  <http://cvx.iptc.org/iso3166-1a2/> .
+@prefix iso3166-1a3:  <http://cvx.iptc.org/iso3166-1a3/> .
+@prefix iso4217a:  <http://cvx.iptc.org/iso4217a/> .
+@prefix iso4217n:  <http://cvx.iptc.org/iso4217n/> .
+@prefix secst:  <http://cvx.iptc.org/secst/> .
+@prefix sedol:  <http://cvx.iptc.org/sedol/> .
+@prefix tidm:  <http://cvx.iptc.org/tidm/> .
+@prefix dbpedia:  <http://dbpedia.org/resource/> .
+@prefix mb-artist:  <http://musicbrainz.org/artist/> .
+@prefix mb-label:  <http://musicbrainz.org/label/> .
+@prefix mb-recording:  <http://musicbrainz.org/recording/> .
+@prefix mb-release:  <http://musicbrainz.org/release/> .
+@prefix mb-releasegroup:  <http://musicbrainz.org/release-group/> .
+@prefix mb-work:  <http://musicbrainz.org/work/> .
+@prefix geonames:  <http://sws.geonames.org/> .
+@prefix freebase:  <http://www.freebase.com> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix wikidata:  <http://www.wikidata.org/entity/> .
+
+
+<http://cv.iptc.org/newscodes/trustindicator/> 
+	rdf:type skos:ConceptScheme ; 
+  ikos:prefSchemeAlias "trustindicator" ;
+  ikos:authority "http://www.iptc.org" ;
+  dct:rightsHolder "IPTC, International Press Telecommunications Council - https://iptc.org" ;
+  ikos:licenceLink "http://creativecommons.org/licenses/by/4.0/" ;
+  ikos:dateReleased "2025-09-30T12:00:00+00:00"^^xsd:dateTime ;
+  dct:dateSubmitted "2025-09-30T12:00:00+00:00"^^xsd:dateTime ;
+  skos:prefLabel "Trust Indicator"@en-GB ;
+  skos:definition "Indicators showing how a news organisation works to encourage readers to consider the news organisation worthy of their trust"@en-GB ;
+  skos:note "This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:hasTopConcept		trustindicator:editorialPolicy ;
+	skos:hasTopConcept		trustindicator:partyInfo ;
+	skos:hasTopConcept		trustindicator:pieceOfWorkInfo .
+
+trustindicator:editorialPolicy
+	rdf:type skos:Concept ;
+	skos:prefLabel	"editorial policy"@en-GB ;
+	skos:definition	"A statement describing the journalistic standards of behaviour expected by the organisation"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:exactMatch <https://schema.org/publishingPrinciples> ;
+	skos:narrower	trustindicator:feedbackPolicy ;
+	skos:narrower	trustindicator:correctionsPolicy ;
+	skos:narrower	trustindicator:editorialDiversityPolicy ;
+	skos:narrower	trustindicator:ethicsPolicy ;
+	skos:narrower	trustindicator:coveragePolicy ;
+	skos:narrower	trustindicator:noBylinesPolicy ;
+	skos:narrower	trustindicator:unnamedSourcesPolicy ;
+	skos:narrower	trustindicator:factCheckingPolicy .
+
+trustindicator:feedbackPolicy
+	rdf:type skos:Concept ;
+	skos:prefLabel	"feedback policy"@en-GB ;
+	skos:definition	"A statement about how a newsroom involves the public in coverage decisions, reporting and activities after publication"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:exactMatch <https://schema.org/actionableFeedbackPolicy> ;
+	skos:broader	trustindicator:editorialPolicy .
+
+trustindicator:correctionsPolicy
+	rdf:type skos:Concept ;
+	skos:prefLabel	"corrections policy"@en-GB ;
+	skos:definition	"A statement describing a newsroom's disclosure and correction policy regarding errors"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:exactMatch <https://schema.org/correctionsPolicy> ;
+	skos:broader	trustindicator:editorialPolicy .
+
+trustindicator:editorialDiversityPolicy
+	rdf:type skos:Concept ;
+	skos:prefLabel	"editorial diversity policy"@en-GB ;
+	skos:definition	"An organisation's policy describing diversity of editorial sources"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:broadMatch <https://schema.org/diversityPolicy> ;
+	skos:broader	trustindicator:editorialPolicy .
+
+trustindicator:ethicsPolicy
+	rdf:type skos:Concept ;
+	skos:prefLabel	"ethics policy"@en-GB ;
+	skos:definition	"Statement about a news organisation's ethics policy, e.g. regarding journalistic and publishing practices"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2020-09-24T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2020-09-24T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:exactMatch <https://schema.org/ethicsPolicy> ;
+	skos:broader	trustindicator:editorialPolicy .
+
+trustindicator:coveragePolicy
+	rdf:type skos:Concept ;
+	skos:prefLabel	"coverage policy"@en-GB ;
+	skos:definition	"A statement on coverage priorities, including any public agenda or stance on issues"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:exactMatch <https://schema.org/missionCoveragePrioritiesPolicy> ;
+	skos:broader	trustindicator:editorialPolicy .
+
+trustindicator:noBylinesPolicy
+	rdf:type skos:Concept ;
+	skos:prefLabel	"no bylines policy"@en-GB ;
+	skos:definition	"A statement explaining when authors of articles are not named in bylines"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:exactMatch <https://schema.org/noBylinesPolicy> ;
+	skos:broader	trustindicator:editorialPolicy .
+
+trustindicator:unnamedSourcesPolicy
+	rdf:type skos:Concept ;
+	skos:prefLabel	"unnamed sources policy"@en-GB ;
+	skos:definition	"A statement about policy on use of unnamed sources and the decision process required."@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:exactMatch <https://schema.org/unnamedSourcesPolicy> ;
+	skos:broader	trustindicator:editorialPolicy .
+
+trustindicator:factCheckingPolicy
+	rdf:type skos:Concept ;
+	skos:prefLabel	"fact checking policy"@en-GB ;
+	skos:definition	"Disclosure about verification and fact-checking processes for a news media organisation"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:exactMatch <https://schema.org/verificationFactCheckingPolicy> ;
+	skos:broader	trustindicator:editorialPolicy .
+
+trustindicator:partyInfo
+	rdf:type skos:Concept ;
+	skos:prefLabel	"party info"@en-GB ;
+	skos:definition	"Information about a party that produces news content (either a person or an organisation)"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:narrower	trustindicator:archive ;
+	skos:narrower	trustindicator:award ;
+	skos:narrower	trustindicator:organisationInfo ;
+	skos:narrower	trustindicator:journalistInfo ;
+	skos:narrower	trustindicator:knowsLanguage ;
+	skos:narrower	trustindicator:knowsAbout .
+
+trustindicator:archive
+	rdf:type skos:Concept ;
+	skos:prefLabel	"archive"@en-GB ;
+	skos:definition	"A list of the journalist or news organisation's work in reverse chronological order, sometimes including a search option"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:broader	trustindicator:partyInfo .
+
+trustindicator:award
+	rdf:type skos:Concept ;
+	skos:prefLabel	"award"@en-GB ;
+	skos:definition	"A list of the honours or awards received by the journalist or news organisation"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:exactMatch <https://schema.org/award> ;
+	skos:broader	trustindicator:partyInfo .
+
+trustindicator:organisationInfo
+	rdf:type skos:Concept ;
+	skos:prefLabel	"organisation info"@en-GB ;
+	skos:definition	"Information about the news organisation or journalist's history and background"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:broadMatch <https://schema.org/description> ;
+	skos:broader	trustindicator:partyInfo ;
+	skos:narrower	trustindicator:organisationDiversityPolicy ;
+	skos:narrower	trustindicator:diversityStaffingReport ;
+	skos:narrower	trustindicator:seniorEditorialStaff ;
+	skos:narrower	trustindicator:ownershipFundingInfo .
+
+trustindicator:organisationDiversityPolicy
+	rdf:type skos:Concept ;
+	skos:prefLabel	"organisation diversity policy"@en-GB ;
+	skos:definition	"Statement on the organisation's staff diversity policy, optionally providing staffing data"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:broadMatch <https://schema.org/diversityPolicy> ;
+	skos:broader	trustindicator:organisationInfo .
+
+trustindicator:diversityStaffingReport
+	rdf:type skos:Concept ;
+	skos:prefLabel	"diversity staffing report"@en-GB ;
+	skos:definition	"A report on staffing diversity issues. In a news context this might be for example ASNE or RTDNA (US) reports, or self-reported."@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:exactMatch <https://schema.org/diversityStaffingReport> ;
+	skos:broader	trustindicator:organisationInfo .
+
+trustindicator:seniorEditorialStaff
+	rdf:type skos:Concept ;
+	skos:prefLabel	"senior editorial staff"@en-GB ;
+	skos:definition	"Information about a news outlet's senior editorial staff, sometimes known as the masthead"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:exactMatch <https://schema.org/masthead> ;
+	skos:broader	trustindicator:organisationInfo .
+
+trustindicator:ownershipFundingInfo
+	rdf:type skos:Concept ;
+	skos:prefLabel	"ownership and funding information"@en-GB ;
+	skos:definition	"A description of organizational ownership structure, funding and grants, with particular reference to editorial independence"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:exactMatch <https://schema.org/ownershipFundingInfo> ;
+	skos:broader	trustindicator:organisationInfo .
+
+trustindicator:journalistInfo
+	rdf:type skos:Concept ;
+	skos:prefLabel	"journalist info"@en-GB ;
+	skos:definition	"Link to the journalist's site-level profile page. This is typically included in each individual piece of content by that journalist."@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:broader	trustindicator:partyInfo ;
+	skos:narrower	trustindicator:biography ;
+	skos:narrower	trustindicator:journalistImage .
+
+trustindicator:biography
+	rdf:type skos:Concept ;
+	skos:prefLabel	"biography"@en-GB ;
+	skos:definition	"Brief journalistic biography. Can include previous employers, education, outside interests, commitments associated with ethics (such as voting, community involvement). According to the Trust Project, biography must include any affiliations that may pose a conflict of interest and how this is handled. A biography's length is not necessarily an indicator of trustworthiness."@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:broader	trustindicator:journalistInfo .
+
+trustindicator:journalistImage
+	rdf:type skos:Concept ;
+	skos:prefLabel	"journalist image"@en-GB ;
+	skos:definition	"Link to photograph or image of the journalist that created a piece of editorial content"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:broadMatch <https://schema.org/image> ;
+	skos:broader	trustindicator:journalistInfo .
+
+trustindicator:knowsLanguage
+	rdf:type skos:Concept ;
+	skos:prefLabel	"knows language"@en-GB ;
+	skos:definition	"Indicates knowledge of a human language. The presence of this indicator does not distinguish skill levels or reading/writing/speaking/signing. Language codes should be taken from the IETF BCP 47 standard."@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:broadMatch <https://schema.org/knowsLanguage> ;
+	skos:broader	trustindicator:partyInfo .
+
+trustindicator:knowsAbout
+	rdf:type skos:Concept ;
+	skos:prefLabel	"knows about"@en-GB ;
+	skos:definition	"Indicates a topic that is known about, suggesting possible expertise without distinguishing skill level"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:broadMatch <https://schema.org/knowsAbout> ;
+	skos:broader	trustindicator:partyInfo .
+
+trustindicator:pieceOfWorkInfo
+	rdf:type skos:Concept ;
+	skos:prefLabel	"piece of work info"@en-GB ;
+	skos:definition	"Trust information that applies to a particular piece of journalistic work, such as references or sources"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:narrower	trustindicator:correctedByResource ;
+	skos:narrower	trustindicator:correctsResource ;
+	skos:narrower	trustindicator:externalSourceMaterials ;
+	skos:narrower	trustindicator:internalSourceMaterials ;
+	skos:narrower	trustindicator:secondarySources .
+
+trustindicator:correctedByResource
+	rdf:type skos:Concept ;
+	skos:prefLabel	"corrected by resource"@en-GB ;
+	skos:definition	"Indicates an update to a journalistic work via a link to another document that corrects this document"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:broadMatch <https://schema.org/correction> ;
+	skos:broader	trustindicator:pieceOfWorkInfo .
+
+trustindicator:correctsResource
+	rdf:type skos:Concept ;
+	skos:prefLabel	"corrects resource"@en-GB ;
+	skos:definition	"Indicates that this news item corrects the referenced news item"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:broadMatch <https://schema.org/CorrectionComment> ;
+	skos:broader	trustindicator:pieceOfWorkInfo .
+
+trustindicator:externalSourceMaterials
+	rdf:type skos:Concept ;
+	skos:prefLabel	"external source materials"@en-GB ;
+	skos:definition	"External material that this news item is based on, such as a press release or parliamentary record"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:broadMatch <https://schema.org/isBasedOn> ;
+	skos:broader	trustindicator:pieceOfWorkInfo .
+
+trustindicator:internalSourceMaterials
+	rdf:type skos:Concept ;
+	skos:prefLabel	"internal source materials"@en-GB ;
+	skos:definition	"Indicates journalistic materials used to create this news item, such as interview transcripts or data analysis"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:broadMatch <http://pending.schema.org/backstory> ;
+	skos:broader	trustindicator:pieceOfWorkInfo .
+
+trustindicator:secondarySources
+	rdf:type skos:Concept ;
+	skos:prefLabel	"secondary sources"@en-GB ;
+	skos:definition	"Indicator of an external source that this news item is based on, such as an existing news report elsewhere in the media"@en-GB ;
+	skos:note	"This vocabulary was created through IPTC's adoption of The Trust Project's Trust Indicators® and collaboration with the Journalism Trust Initiative"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/trustindicator/>  ;
+	ikos:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-19T12:00:00+00:00"^^xsd:dateTime  ;
+	skos:broadMatch <https://schema.org/isBasedOn> ;
+	skos:broader	trustindicator:pieceOfWorkInfo .

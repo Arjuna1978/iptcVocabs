@@ -1,0 +1,881 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix altidrole:  <http://cv.iptc.org/newscodes/altidrole/> .
+@prefix aoprop:  <http://cv.iptc.org/newscodes/aoproperty/> .
+@prefix app:  <http://cv.iptc.org/newscodes/application/> .
+@prefix aspfacet:  <http://cv.iptc.org/newscodes/asportfacet/> .
+@prefix aspfacetvalue:  <http://cv.iptc.org/newscodes/asportfacetvalue/> .
+@prefix acdc:  <http://cv.iptc.org/newscodes/audiocodec/> .
+@prefix catinat:  <http://cv.iptc.org/newscodes/catinature/> .
+@prefix chprop:  <http://cv.iptc.org/newscodes/characteristicsproperty/> .
+@prefix cinat:  <http://cv.iptc.org/newscodes/cinature/> .
+@prefix colsp:  <http://cv.iptc.org/newscodes/colorspace/> .
+@prefix colin:  <http://cv.iptc.org/newscodes/colourindicator/> .
+@prefix ctech:  <http://cv.iptc.org/newscodes/commtech/> .
+@prefix cptdefrole:  <http://cv.iptc.org/newscodes/conceptdefinitionrole/> .
+@prefix cptnoterole:  <http://cv.iptc.org/newscodes/conceptnoterole/> .
+@prefix cpprole: <http://cv.iptc.org/newscodes/contentprodpartyrole/> .
+@prefix crel:  <http://cv.iptc.org/newscodes/conceptrelation/> .
+@prefix conf:  <http://cv.iptc.org/newscodes/confidence/> .
+@prefix ciprol:  <http://cv.iptc.org/newscodes/contactinfopartrole/> .
+@prefix cwarn:  <http://cv.iptc.org/newscodes/contentwarning/> .
+@prefix ctrol:  <http://cv.iptc.org/newscodes/contributorrole/> .
+@prefix cpnat:  <http://cv.iptc.org/newscodes/cpnature/> .
+@prefix drol:  <http://cv.iptc.org/newscodes/descriptionrole/> .
+@prefix digsrctype:  <http://cv.iptc.org/newscodes/digitalsourcetype/> .
+@prefix dimensionunit:  <http://cv.iptc.org/newscodes/dimensionunit/> .
+@prefix ednoterole:  <http://cv.iptc.org/newscodes/ednoterole/> .
+@prefix dummy:  <http://cv.iptc.org/newscodes/dummy/> .
+@prefix erol:  <http://cv.iptc.org/newscodes/edrole/> .
+@prefix encd:  <http://cv.iptc.org/newscodes/encoding/> .
+@prefix entityprop:  <http://cv.iptc.org/newscodes/entityproperty/> .
+@prefix ecirol:  <http://cv.iptc.org/newscodes/eventcontactinforole/> .
+@prefix edconf:  <http://cv.iptc.org/newscodes/eventdateconfirm/> .
+@prefix eocstat:  <http://cv.iptc.org/newscodes/eventoccurstatus/> .
+@prefix eorol:  <http://cv.iptc.org/newscodes/eventorganiserrole/> .
+@prefix eprol:  <http://cv.iptc.org/newscodes/eventparticipantrole/> .
+@prefix eregrol:  <http://cv.iptc.org/newscodes/eventregrole/> .
+@prefix fisymtype:  <http://cv.iptc.org/newscodes/financialinstrumentsymboltype/> .
+@prefix frmt:  <http://cv.iptc.org/newscodes/format/> .
+@prefix gen:  <http://cv.iptc.org/newscodes/generic/> .
+@prefix genre:  <http://cv.iptc.org/newscodes/genre/> .
+@prefix hashscope:  <http://cv.iptc.org/newscodes/hashscope/> .
+@prefix hashtype:  <http://cv.iptc.org/newscodes/hashtype/> .
+@prefix hopaction:  <http://cv.iptc.org/newscodes/hopaction/> .
+@prefix hatarget:  <http://cv.iptc.org/newscodes/hopactiontarget/> .
+@prefix howextr:  <http://cv.iptc.org/newscodes/howextracted/> .
+@prefix howpr:  <http://cv.iptc.org/newscodes/howpresent/> .
+@prefix ikos:  <http://cv.iptc.org/newscodes/ikos/> .
+@prefix impt:  <http://cv.iptc.org/newscodes/importance/> .
+@prefix isrol:  <http://cv.iptc.org/newscodes/infosourcerole/> .
+@prefix irel:  <http://cv.iptc.org/newscodes/itemrelation/> .
+@prefix irep:  <http://cv.iptc.org/newscodes/itemrepresentation/> .
+@prefix lbtyp:  <http://cv.iptc.org/newscodes/labeltype/> .
+@prefix lrol:  <http://cv.iptc.org/newscodes/languagerole/> .
+@prefix loutorient:  <http://cv.iptc.org/newscodes/layoutorientation/> .
+@prefix loctyp:  <http://cv.iptc.org/newscodes/location/> .
+@prefix medtop:  <http://cv.iptc.org/newscodes/mediatopic/> .
+@prefix mtyp:  <http://cv.iptc.org/newscodes/mediatype/> .
+@prefix medtype:  <http://cv.iptc.org/newscodes/mediatype1/> .
+@prefix nprt:  <http://cv.iptc.org/newscodes/namepart/> .
+@prefix nrol:  <http://cv.iptc.org/newscodes/namerole/> .
+@prefix ncostat:  <http://cv.iptc.org/newscodes/newscoveragestatus/> .
+@prefix nityp:  <http://cv.iptc.org/newscodes/newsitemtype/> .
+@prefix nmsig:  <http://cv.iptc.org/newscodes/newsmsgsignal/> .
+@prefix nprod:  <http://cv.iptc.org/newscodes/newsproduct/> .
+@prefix nprov:  <http://cv.iptc.org/newscodes/newsprovider/> .
+@prefix ninat:  <http://cv.iptc.org/newscodes/ninature/> .
+@prefix not:  <http://cv.iptc.org/newscodes/notation/> .
+@prefix oito:  <http://cv.iptc.org/newscodes/ofinterestto/> .
+@prefix pgrmod:  <http://cv.iptc.org/newscodes/pkggroupmode/> .
+@prefix plinat:  <http://cv.iptc.org/newscodes/plinature/> .
+@prefix prio:  <http://cv.iptc.org/newscodes/priority/> .
+@prefix prodgenre:  <http://cv.iptc.org/newscodes/productgenre/> .
+@prefix prop:  <http://cv.iptc.org/newscodes/property/> .
+@prefix prov:  <http://cv.iptc.org/newscodes/provider/> .
+@prefix stat:  <http://cv.iptc.org/newscodes/pubstatusg2/> .
+@prefix rtype:  <http://cv.iptc.org/newscodes/ratertype/> .
+@prefix rcalctype:  <http://cv.iptc.org/newscodes/rcalctype/> .
+@prefix rel:  <http://cv.iptc.org/newscodes/relevance/> .
+@prefix rnd:  <http://cv.iptc.org/newscodes/rendition/> .
+@prefix riaspect:  <http://cv.iptc.org/newscodes/riaspect/> .
+@prefix rightsprop:  <http://cv.iptc.org/newscodes/rightsproperty/> .
+@prefix riscope:  <http://cv.iptc.org/newscodes/riscope/> .
+@prefix role1:  <http://cv.iptc.org/newscodes/role1/> .
+@prefix rscaleunit:  <http://cv.iptc.org/newscodes/rscaleunit/> .
+@prefix scn:  <http://cv.iptc.org/newscodes/scene/> .
+@prefix sev:  <http://cv.iptc.org/newscodes/severity/> .
+@prefix sig:  <http://cv.iptc.org/newscodes/signal/> .
+@prefix pst1:  <http://cv.iptc.org/newscodes/status1/> .
+@prefix subj:  <http://cv.iptc.org/newscodes/subjectcode/> .
+@prefix squ:  <http://cv.iptc.org/newscodes/subjectqualifier/> .
+@prefix timeunit:  <http://cv.iptc.org/newscodes/timeunit/> .
+@prefix tone:  <http://cv.iptc.org/newscodes/tone/> .
+@prefix tpctyp:  <http://cv.iptc.org/newscodes/topictype/> .
+@prefix trustindicator:  <http://cv.iptc.org/newscodes/trustindicator/> .
+@prefix urgy:  <http://cv.iptc.org/newscodes/urgency/> .
+@prefix useracttype:  <http://cv.iptc.org/newscodes/useractiontype/> .
+@prefix valfmt:  <http://cv.iptc.org/newscodes/valueformat/> .
+@prefix vcdc:  <http://cv.iptc.org/newscodes/videocodec/> .
+@prefix videodef:  <http://cv.iptc.org/newscodes/videodefinition/> .
+@prefix ivqu:  <http://cv.iptc.org/newscodes/videoqualifier/> .
+@prefix sov:  <http://cv.iptc.org/newscodes/videoscaling/> .
+@prefix why:  <http://cv.iptc.org/newscodes/whypresent/> .
+@prefix wldreg:  <http://cv.iptc.org/newscodes/worldregion/> .
+@prefix a1312cat:  <http://cvx.iptc.org/anpa1312-category/> .
+@prefix a1312prio:  <http://cvx.iptc.org/anpa1312-priority/> .
+@prefix a1312svc:  <http://cvx.iptc.org/anpa1312-servicelevel/> .
+@prefix a1312vers:  <http://cvx.iptc.org/anpa1312-version/> .
+@prefix bcp47:  <http://cvx.iptc.org/bcp47/> .
+@prefix cusip:  <http://cvx.iptc.org/cusip/> .
+@prefix gics:  <http://cvx.iptc.org/gics/> .
+@prefix isin:  <http://cvx.iptc.org/isin/> .
+@prefix mic:  <http://cvx.iptc.org/iso10383-mic/> .
+@prefix iso3166-1a2:  <http://cvx.iptc.org/iso3166-1a2/> .
+@prefix iso3166-1a3:  <http://cvx.iptc.org/iso3166-1a3/> .
+@prefix iso4217a:  <http://cvx.iptc.org/iso4217a/> .
+@prefix iso4217n:  <http://cvx.iptc.org/iso4217n/> .
+@prefix secst:  <http://cvx.iptc.org/secst/> .
+@prefix sedol:  <http://cvx.iptc.org/sedol/> .
+@prefix tidm:  <http://cvx.iptc.org/tidm/> .
+@prefix dbpedia:  <http://dbpedia.org/resource/> .
+@prefix mb-artist:  <http://musicbrainz.org/artist/> .
+@prefix mb-label:  <http://musicbrainz.org/label/> .
+@prefix mb-recording:  <http://musicbrainz.org/recording/> .
+@prefix mb-release:  <http://musicbrainz.org/release/> .
+@prefix mb-releasegroup:  <http://musicbrainz.org/release-group/> .
+@prefix mb-work:  <http://musicbrainz.org/work/> .
+@prefix geonames:  <http://sws.geonames.org/> .
+@prefix freebase:  <http://www.freebase.com> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix wikidata:  <http://www.wikidata.org/entity/> .
+
+
+<http://cv.iptc.org/newscodes/newsprovider/> 
+	rdf:type skos:ConceptScheme ; 
+  ikos:prefSchemeAlias "nprov" ;
+  ikos:authority "http://www.iptc.org" ;
+  dct:rightsHolder "IPTC, International Press Telecommunications Council - https://iptc.org" ;
+  ikos:licenceLink "http://creativecommons.org/licenses/by/4.0/" ;
+  ikos:dateReleased "2024-05-07T12:00:00+00:00"^^xsd:dateTime ;
+  dct:dateSubmitted "2024-05-07T12:00:00+00:00"^^xsd:dateTime ;
+  skos:prefLabel "News Provider"@en-GB ;
+  skos:definition "Indicates a News Provider registered with the IPTC."@en-GB ;
+  skos:note "See also the News Product NewsCodes "@en-GB ;
+	skos:hasTopConcept		nprov:ACCESSWIRE ;
+	skos:hasTopConcept		nprov:AFP ;
+	skos:hasTopConcept		nprov:AMB ;
+	skos:hasTopConcept		nprov:ANA ;
+	skos:hasTopConcept		nprov:ANI ;
+	skos:hasTopConcept		nprov:ANL ;
+	skos:hasTopConcept		nprov:ANM ;
+	skos:hasTopConcept		nprov:ANSA ;
+	skos:hasTopConcept		nprov:AP ;
+	skos:hasTopConcept		nprov:APA ;
+	skos:hasTopConcept		nprov:APS ;
+	skos:hasTopConcept		nprov:ASBU ;
+	skos:hasTopConcept		nprov:BBC ;
+	skos:hasTopConcept		nprov:BLOOMBERG ;
+	skos:hasTopConcept		nprov:BN ;
+	skos:hasTopConcept		nprov:BNA ;
+	skos:hasTopConcept		nprov:BW ;
+	skos:hasTopConcept		nprov:CNS ;
+	skos:hasTopConcept		nprov:CP ;
+	skos:hasTopConcept		nprov:CTK ;
+	skos:hasTopConcept		nprov:DIRECT ;
+	skos:hasTopConcept		nprov:DMGT ;
+	skos:hasTopConcept		nprov:dpa ;
+	skos:hasTopConcept		nprov:EFE ;
+	skos:hasTopConcept		nprov:EPD ;
+	skos:hasTopConcept		nprov:ETXSTUDIO ;
+	skos:hasTopConcept		nprov:FMI ;
+	skos:hasTopConcept		nprov:FOOL ;
+	skos:hasTopConcept		nprov:GLOBE ;
+	skos:hasTopConcept		nprov:GNA ;
+	skos:hasTopConcept		nprov:GYI ;
+	skos:hasTopConcept		nprov:HNA ;
+	skos:hasTopConcept		nprov:IHT ;
+	skos:hasTopConcept		nprov:INA ;
+	skos:hasTopConcept		nprov:IPTC ;
+	skos:hasTopConcept		nprov:IRNA ;
+	skos:hasTopConcept		nprov:KNA ;
+	skos:hasTopConcept		nprov:KSDA ;
+	skos:hasTopConcept		nprov:KUNA ;
+	skos:hasTopConcept		nprov:KYODO ;
+	skos:hasTopConcept		nprov:LUSA ;
+	skos:hasTopConcept		nprov:MEDIACONNECT ;
+	skos:hasTopConcept		nprov:MEDIAOUTREACH ;
+	skos:hasTopConcept		nprov:MEI ;
+	skos:hasTopConcept		nprov:MTI ;
+	skos:hasTopConcept		nprov:NA.DE ;
+	skos:hasTopConcept		nprov:NEWSDIRECT ;
+	skos:hasTopConcept		nprov:NTB ;
+	skos:hasTopConcept		nprov:NTR ;
+	skos:hasTopConcept		nprov:NYTBG ;
+	skos:hasTopConcept		nprov:NYTIMES ;
+	skos:hasTopConcept		nprov:NYTRNG ;
+	skos:hasTopConcept		nprov:PA ;
+	skos:hasTopConcept		nprov:PC ;
+	skos:hasTopConcept		nprov:PETRA ;
+	skos:hasTopConcept		nprov:PRESSAT ;
+	skos:hasTopConcept		nprov:PRN ;
+	skos:hasTopConcept		nprov:PRNE ;
+	skos:hasTopConcept		nprov:QNA ;
+	skos:hasTopConcept		nprov:REUTERS ;
+	skos:hasTopConcept		nprov:SABA ;
+	skos:hasTopConcept		nprov:SANA ;
+	skos:hasTopConcept		nprov:SPA ;
+	skos:hasTopConcept		nprov:SPX ;
+	skos:hasTopConcept		nprov:STA ;
+	skos:hasTopConcept		nprov:SUNA ;
+	skos:hasTopConcept		nprov:TT ;
+	skos:hasTopConcept		nprov:UPI ;
+	skos:hasTopConcept		nprov:USATF ;
+	skos:hasTopConcept		nprov:WAFA ;
+	skos:hasTopConcept		nprov:WAM ;
+	skos:hasTopConcept		nprov:XHA .
+
+nprov:ACCESSWIRE
+	rdf:type skos:Concept ;
+	skos:prefLabel	"ACCESSWIRE"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2021-02-09T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2021-02-09T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2021-02-09T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2021-02-09T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:AFP
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Agence France-Presse"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:AMB
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Associated MediaBase, Associated Newspapers Limited"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:ANA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Athens News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:ANI
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Lebanese News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:ANL
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Associated Newspapers Limited"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:ANM
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Associated News Media, Associated Newspapers Limited"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:ANSA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Italian News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:AP
+	rdf:type skos:Concept ;
+	skos:prefLabel	"The Associated Press"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:APA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Austria Presse Agentur e.G."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:APS
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Algerian News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:ASBU
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Arab States Broadcasting Union"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2022-09-30T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2022-09-30T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2022-09-30T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2022-09-30T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:BBC
+	rdf:type skos:Concept ;
+	skos:prefLabel	"BBC - British Broadcasting Corporation"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2015-08-27T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2015-08-27T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2015-08-27T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2015-08-27T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:BLOOMBERG
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Bloomberg LP"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2015-05-12T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2015-05-12T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2015-05-12T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2015-05-12T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:BN
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Broadcast News"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:BNA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Bahrain News Agency  (used to be called the Gulf News Agency)"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:BW
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Business Wire"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:CNS
+	rdf:type skos:Concept ;
+	skos:prefLabel	"CNS - Catholic News Service"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2015-08-27T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2015-08-27T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2015-08-27T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2015-08-27T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:CP
+	rdf:type skos:Concept ;
+	skos:prefLabel	"The Canadian Press"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:CTK
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Czech News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:DIRECT
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Directnews press release distributor, [Leipzig,Germany]"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:DMGT
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Daily Mail and General Trust, Associated Newspapers Limited"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:dpa
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Deutsche Presse-Agentur GmbH"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:EFE
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Agencia EFE"@en-GB ;
+	skos:prefLabel	"Agencia EFE"@es ;
+	skos:definition	"EFE News - Spanish news agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2011-02-22T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2011-02-22T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2011-02-22T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2011-02-22T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:EPD
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Evangelischer Pressedienst (epd)"@en-GB ;
+	skos:prefLabel	"Evangelischer Pressedienst (epd)"@de ;
+	skos:note	"http://www.epd.de"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2016-03-11T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2016-03-11T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2016-03-11T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2016-03-11T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:ETXSTUDIO
+	rdf:type skos:Concept ;
+	skos:prefLabel	"ETX STUDIO"@en-GB ;
+	skos:note	"http://www.etxstudio.com"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2021-04-12T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2021-04-12T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2021-04-12T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2021-04-12T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:FMI
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Future Market Insights, Inc."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2023-06-30T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2023-06-30T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2023-06-30T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2023-06-30T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:FOOL
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Foolpix.com"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:GLOBE
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Boston Globe"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:GNA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Gulf News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:GYI
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Getty Images Inc."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2010-12-15T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2010-12-15T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:HNA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Croatian News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:IHT
+	rdf:type skos:Concept ;
+	skos:prefLabel	"The International Herald Tribune"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:INA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Iraq News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:IPTC
+	rdf:type skos:Concept ;
+	skos:prefLabel	"IPTC - International Press Telecommunications Council"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:IRNA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Iranian News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:KNA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"KNA News Agency"@en-GB ;
+	skos:definition	"Katholische Nachrichten-Agentur GmbH, Germany - www.kna.de"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2013-09-18T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2013-09-18T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2013-09-18T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2013-09-18T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:KSDA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Keystone-SDA-ATS AG"@en-GB ;
+	skos:definition	"National news agency of Switzerland"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2019-12-06T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:KUNA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Kuwait News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:KYODO
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Kyodo news service"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:LUSA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Lusa News Agency"@en-GB ;
+	skos:definition	"Lusa – Agência de Notícias de Portugal, S.A. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:MEDIACONNECT
+	rdf:type skos:Concept ;
+	skos:prefLabel	"MediaConnect"@en-GB ;
+	skos:note	"https://www.afp.com/en/agency/subsidiaries/mediaconnect"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2023-03-15T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2023-03-15T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2023-03-15T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2023-03-15T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:MEDIAOUTREACH
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Media Outreach"@en-GB ;
+	skos:note	"http://www.media-outreach.com"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2021-04-21T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2021-04-21T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2021-04-21T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2021-04-21T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:MEI
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Middle East Images"@en-GB ;
+	skos:note	"https://meimages.com/"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2023-03-15T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2023-03-15T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2023-03-15T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2023-03-15T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:MTI
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Magyar Tavirati Iroda"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:NA.DE
+	rdf:type skos:Concept ;
+	skos:prefLabel	"news aktuell GmbH (Deutschland)"@de ;
+	skos:prefLabel	"news aktuell GmbH (Germany)"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2015-01-09T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2015-01-09T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2015-01-09T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2015-01-09T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:NEWSDIRECT
+	rdf:type skos:Concept ;
+	skos:prefLabel	"News Direct"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2021-02-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2021-02-17T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2021-02-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2021-02-17T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:NTB
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Norsk Telegrambyrå"@nb-NO ;
+	skos:prefLabel	"Norwegian News Agency"@en-GB ;
+	skos:definition	"National news agency of Norway"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2014-08-13T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2014-08-13T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2014-08-13T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2014-08-13T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:NTR
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Nouvelles tele-radio"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:NYTBG
+	rdf:type skos:Concept ;
+	skos:prefLabel	"New York Times Broadcasting Group"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:NYTIMES
+	rdf:type skos:Concept ;
+	skos:prefLabel	"The New York Times"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:NYTRNG
+	rdf:type skos:Concept ;
+	skos:prefLabel	"New York Times Regional Newspaper Group"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:PA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"PA Media Group"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2023-03-15T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2023-03-15T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:PC
+	rdf:type skos:Concept ;
+	skos:prefLabel	"La Presse Canadienne"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:PETRA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Jordanian News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:PRESSAT
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Pressat"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2024-05-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2024-05-07T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-05-07T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-05-07T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:PRN
+	rdf:type skos:Concept ;
+	skos:prefLabel	"PR NewsWire"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:PRNE
+	rdf:type skos:Concept ;
+	skos:prefLabel	"PR NewsWire Europe"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:QNA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Quatar News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:REUTERS
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Reuters"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:SABA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Yemen News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:SANA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Syrian Arab News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2015-08-27T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2015-08-27T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:SPA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Saudi Press Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:SPX
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Space Daily [Gerroa, NSW, Australia]"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:STA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Slovenska Tiskovna Agencija"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:SUNA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Sudan News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:TT
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Tidningarnas Telegrambyra"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:UPI
+	rdf:type skos:Concept ;
+	skos:prefLabel	"United Press International"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:USATF
+	rdf:type skos:Concept ;
+	skos:prefLabel	"USA Track and Field"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:WAFA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Palestanian News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:WAM
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Emirates News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2008-07-02T12:00:00+00:00"^^xsd:dateTime  .
+
+nprov:XHA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Xinhua News Agency"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/newsprovider/>  ;
+	ikos:created "2020-06-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2020-06-17T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2020-06-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2020-06-17T12:00:00+00:00"^^xsd:dateTime  .

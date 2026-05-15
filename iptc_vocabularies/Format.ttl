@@ -1,0 +1,629 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix altidrole:  <http://cv.iptc.org/newscodes/altidrole/> .
+@prefix aoprop:  <http://cv.iptc.org/newscodes/aoproperty/> .
+@prefix app:  <http://cv.iptc.org/newscodes/application/> .
+@prefix aspfacet:  <http://cv.iptc.org/newscodes/asportfacet/> .
+@prefix aspfacetvalue:  <http://cv.iptc.org/newscodes/asportfacetvalue/> .
+@prefix acdc:  <http://cv.iptc.org/newscodes/audiocodec/> .
+@prefix catinat:  <http://cv.iptc.org/newscodes/catinature/> .
+@prefix chprop:  <http://cv.iptc.org/newscodes/characteristicsproperty/> .
+@prefix cinat:  <http://cv.iptc.org/newscodes/cinature/> .
+@prefix colsp:  <http://cv.iptc.org/newscodes/colorspace/> .
+@prefix colin:  <http://cv.iptc.org/newscodes/colourindicator/> .
+@prefix ctech:  <http://cv.iptc.org/newscodes/commtech/> .
+@prefix cptdefrole:  <http://cv.iptc.org/newscodes/conceptdefinitionrole/> .
+@prefix cptnoterole:  <http://cv.iptc.org/newscodes/conceptnoterole/> .
+@prefix cpprole: <http://cv.iptc.org/newscodes/contentprodpartyrole/> .
+@prefix crel:  <http://cv.iptc.org/newscodes/conceptrelation/> .
+@prefix conf:  <http://cv.iptc.org/newscodes/confidence/> .
+@prefix ciprol:  <http://cv.iptc.org/newscodes/contactinfopartrole/> .
+@prefix cwarn:  <http://cv.iptc.org/newscodes/contentwarning/> .
+@prefix ctrol:  <http://cv.iptc.org/newscodes/contributorrole/> .
+@prefix cpnat:  <http://cv.iptc.org/newscodes/cpnature/> .
+@prefix drol:  <http://cv.iptc.org/newscodes/descriptionrole/> .
+@prefix digsrctype:  <http://cv.iptc.org/newscodes/digitalsourcetype/> .
+@prefix dimensionunit:  <http://cv.iptc.org/newscodes/dimensionunit/> .
+@prefix ednoterole:  <http://cv.iptc.org/newscodes/ednoterole/> .
+@prefix dummy:  <http://cv.iptc.org/newscodes/dummy/> .
+@prefix erol:  <http://cv.iptc.org/newscodes/edrole/> .
+@prefix encd:  <http://cv.iptc.org/newscodes/encoding/> .
+@prefix entityprop:  <http://cv.iptc.org/newscodes/entityproperty/> .
+@prefix ecirol:  <http://cv.iptc.org/newscodes/eventcontactinforole/> .
+@prefix edconf:  <http://cv.iptc.org/newscodes/eventdateconfirm/> .
+@prefix eocstat:  <http://cv.iptc.org/newscodes/eventoccurstatus/> .
+@prefix eorol:  <http://cv.iptc.org/newscodes/eventorganiserrole/> .
+@prefix eprol:  <http://cv.iptc.org/newscodes/eventparticipantrole/> .
+@prefix eregrol:  <http://cv.iptc.org/newscodes/eventregrole/> .
+@prefix fisymtype:  <http://cv.iptc.org/newscodes/financialinstrumentsymboltype/> .
+@prefix frmt:  <http://cv.iptc.org/newscodes/format/> .
+@prefix gen:  <http://cv.iptc.org/newscodes/generic/> .
+@prefix genre:  <http://cv.iptc.org/newscodes/genre/> .
+@prefix hashscope:  <http://cv.iptc.org/newscodes/hashscope/> .
+@prefix hashtype:  <http://cv.iptc.org/newscodes/hashtype/> .
+@prefix hopaction:  <http://cv.iptc.org/newscodes/hopaction/> .
+@prefix hatarget:  <http://cv.iptc.org/newscodes/hopactiontarget/> .
+@prefix howextr:  <http://cv.iptc.org/newscodes/howextracted/> .
+@prefix howpr:  <http://cv.iptc.org/newscodes/howpresent/> .
+@prefix ikos:  <http://cv.iptc.org/newscodes/ikos/> .
+@prefix impt:  <http://cv.iptc.org/newscodes/importance/> .
+@prefix isrol:  <http://cv.iptc.org/newscodes/infosourcerole/> .
+@prefix irel:  <http://cv.iptc.org/newscodes/itemrelation/> .
+@prefix irep:  <http://cv.iptc.org/newscodes/itemrepresentation/> .
+@prefix lbtyp:  <http://cv.iptc.org/newscodes/labeltype/> .
+@prefix lrol:  <http://cv.iptc.org/newscodes/languagerole/> .
+@prefix loutorient:  <http://cv.iptc.org/newscodes/layoutorientation/> .
+@prefix loctyp:  <http://cv.iptc.org/newscodes/location/> .
+@prefix medtop:  <http://cv.iptc.org/newscodes/mediatopic/> .
+@prefix mtyp:  <http://cv.iptc.org/newscodes/mediatype/> .
+@prefix medtype:  <http://cv.iptc.org/newscodes/mediatype1/> .
+@prefix nprt:  <http://cv.iptc.org/newscodes/namepart/> .
+@prefix nrol:  <http://cv.iptc.org/newscodes/namerole/> .
+@prefix ncostat:  <http://cv.iptc.org/newscodes/newscoveragestatus/> .
+@prefix nityp:  <http://cv.iptc.org/newscodes/newsitemtype/> .
+@prefix nmsig:  <http://cv.iptc.org/newscodes/newsmsgsignal/> .
+@prefix nprod:  <http://cv.iptc.org/newscodes/newsproduct/> .
+@prefix nprov:  <http://cv.iptc.org/newscodes/newsprovider/> .
+@prefix ninat:  <http://cv.iptc.org/newscodes/ninature/> .
+@prefix not:  <http://cv.iptc.org/newscodes/notation/> .
+@prefix oito:  <http://cv.iptc.org/newscodes/ofinterestto/> .
+@prefix pgrmod:  <http://cv.iptc.org/newscodes/pkggroupmode/> .
+@prefix plinat:  <http://cv.iptc.org/newscodes/plinature/> .
+@prefix prio:  <http://cv.iptc.org/newscodes/priority/> .
+@prefix prodgenre:  <http://cv.iptc.org/newscodes/productgenre/> .
+@prefix prop:  <http://cv.iptc.org/newscodes/property/> .
+@prefix prov:  <http://cv.iptc.org/newscodes/provider/> .
+@prefix stat:  <http://cv.iptc.org/newscodes/pubstatusg2/> .
+@prefix rtype:  <http://cv.iptc.org/newscodes/ratertype/> .
+@prefix rcalctype:  <http://cv.iptc.org/newscodes/rcalctype/> .
+@prefix rel:  <http://cv.iptc.org/newscodes/relevance/> .
+@prefix rnd:  <http://cv.iptc.org/newscodes/rendition/> .
+@prefix riaspect:  <http://cv.iptc.org/newscodes/riaspect/> .
+@prefix rightsprop:  <http://cv.iptc.org/newscodes/rightsproperty/> .
+@prefix riscope:  <http://cv.iptc.org/newscodes/riscope/> .
+@prefix role1:  <http://cv.iptc.org/newscodes/role1/> .
+@prefix rscaleunit:  <http://cv.iptc.org/newscodes/rscaleunit/> .
+@prefix scn:  <http://cv.iptc.org/newscodes/scene/> .
+@prefix sev:  <http://cv.iptc.org/newscodes/severity/> .
+@prefix sig:  <http://cv.iptc.org/newscodes/signal/> .
+@prefix pst1:  <http://cv.iptc.org/newscodes/status1/> .
+@prefix subj:  <http://cv.iptc.org/newscodes/subjectcode/> .
+@prefix squ:  <http://cv.iptc.org/newscodes/subjectqualifier/> .
+@prefix timeunit:  <http://cv.iptc.org/newscodes/timeunit/> .
+@prefix tpctyp:  <http://cv.iptc.org/newscodes/topictype/> .
+@prefix trustindicator:  <http://cv.iptc.org/newscodes/trustindicator/> .
+@prefix urgy:  <http://cv.iptc.org/newscodes/urgency/> .
+@prefix useracttype:  <http://cv.iptc.org/newscodes/useractiontype/> .
+@prefix valfmt:  <http://cv.iptc.org/newscodes/valueformat/> .
+@prefix vcdc:  <http://cv.iptc.org/newscodes/videocodec/> .
+@prefix videodef:  <http://cv.iptc.org/newscodes/videodefinition/> .
+@prefix ivqu:  <http://cv.iptc.org/newscodes/videoqualifier/> .
+@prefix sov:  <http://cv.iptc.org/newscodes/videoscaling/> .
+@prefix why:  <http://cv.iptc.org/newscodes/whypresent/> .
+@prefix wldreg:  <http://cv.iptc.org/newscodes/worldregion/> .
+@prefix a1312cat:  <http://cvx.iptc.org/anpa1312-category/> .
+@prefix a1312prio:  <http://cvx.iptc.org/anpa1312-priority/> .
+@prefix a1312svc:  <http://cvx.iptc.org/anpa1312-servicelevel/> .
+@prefix a1312vers:  <http://cvx.iptc.org/anpa1312-version/> .
+@prefix bcp47:  <http://cvx.iptc.org/bcp47/> .
+@prefix cusip:  <http://cvx.iptc.org/cusip/> .
+@prefix gics:  <http://cvx.iptc.org/gics/> .
+@prefix isin:  <http://cvx.iptc.org/isin/> .
+@prefix mic:  <http://cvx.iptc.org/iso10383-mic/> .
+@prefix iso3166-1a2:  <http://cvx.iptc.org/iso3166-1a2/> .
+@prefix iso3166-1a3:  <http://cvx.iptc.org/iso3166-1a3/> .
+@prefix iso4217a:  <http://cvx.iptc.org/iso4217a/> .
+@prefix iso4217n:  <http://cvx.iptc.org/iso4217n/> .
+@prefix secst:  <http://cvx.iptc.org/secst/> .
+@prefix sedol:  <http://cvx.iptc.org/sedol/> .
+@prefix tidm:  <http://cvx.iptc.org/tidm/> .
+@prefix dbpedia:  <http://dbpedia.org/resource/> .
+@prefix mb-artist:  <http://musicbrainz.org/artist/> .
+@prefix mb-label:  <http://musicbrainz.org/label/> .
+@prefix mb-recording:  <http://musicbrainz.org/recording/> .
+@prefix mb-release:  <http://musicbrainz.org/release/> .
+@prefix mb-releasegroup:  <http://musicbrainz.org/release-group/> .
+@prefix mb-work:  <http://musicbrainz.org/work/> .
+@prefix geonames:  <http://sws.geonames.org/> .
+@prefix freebase:  <http://www.freebase.com> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix wikidata:  <http://www.wikidata.org/entity/> .
+
+
+<http://cv.iptc.org/newscodes/format/> 
+	rdf:type skos:ConceptScheme ; 
+  ikos:prefSchemeAlias "frmt" ;
+  ikos:authority "http://www.iptc.org" ;
+  dct:rightsHolder "IPTC, International Press Telecommunications Council - https://iptc.org" ;
+  ikos:licenceLink "http://creativecommons.org/licenses/by/4.0/" ;
+  ikos:dateReleased "2023-05-17T12:00:00+00:00"^^xsd:dateTime ;
+  dct:dateSubmitted "2023-05-17T12:00:00+00:00"^^xsd:dateTime ;
+  skos:prefLabel "Format"@en-GB ;
+  skos:definition "Indicates the technical format of content."@en-GB ;
+	skos:HasTopConcept		frmt:AI ;
+	skos:HasTopConcept		frmt:AIFF ;
+	skos:HasTopConcept		frmt:AIFF-C ;
+	skos:HasTopConcept		frmt:ANPA1312 ;
+	skos:HasTopConcept		frmt:BMP ;
+	skos:HasTopConcept		frmt:CDR ;
+	skos:HasTopConcept		frmt:CSV ;
+	skos:HasTopConcept		frmt:DNPR ;
+	skos:HasTopConcept		frmt:EPS_Adobe_Illustrator_Compatible ;
+	skos:HasTopConcept		frmt:EPS_Adobe_Illustrator_v9.0_Compatible ;
+	skos:HasTopConcept		frmt:FLA ;
+	skos:HasTopConcept		frmt:Freehand ;
+	skos:HasTopConcept		frmt:GIF87a ;
+	skos:HasTopConcept		frmt:GIF89a_interlaced ;
+	skos:HasTopConcept		frmt:GIF89a_non-interlaced ;
+	skos:HasTopConcept		frmt:IIM ;
+	skos:HasTopConcept		frmt:ImagePac ;
+	skos:HasTopConcept		frmt:IPTC7901 ;
+	skos:HasTopConcept		frmt:JPEG_Baseline ;
+	skos:HasTopConcept		frmt:JPEG_Progressive ;
+	skos:HasTopConcept		frmt:MP3 ;
+	skos:HasTopConcept		frmt:MPEG ;
+	skos:HasTopConcept		frmt:NITF ;
+	skos:HasTopConcept		frmt:NSK-TIFF ;
+	skos:HasTopConcept		frmt:PCX ;
+	skos:HasTopConcept		frmt:PDF ;
+	skos:HasTopConcept		frmt:PhotoShop ;
+	skos:HasTopConcept		frmt:PNG ;
+	skos:HasTopConcept		frmt:PS ;
+	skos:HasTopConcept		frmt:Quicktime ;
+	skos:HasTopConcept		frmt:Real_Audio ;
+	skos:HasTopConcept		frmt:Real_Video ;
+	skos:HasTopConcept		frmt:Ritzau-NITF ;
+	skos:HasTopConcept		frmt:SVG ;
+	skos:HasTopConcept		frmt:SWF ;
+	skos:HasTopConcept		frmt:TIF ;
+	skos:HasTopConcept		frmt:TIFF ;
+	skos:HasTopConcept		frmt:TTNITF ;
+	skos:HasTopConcept		frmt:UCOFF ;
+	skos:HasTopConcept		frmt:Video_for_Windows ;
+	skos:HasTopConcept		frmt:Waveform_Audio ;
+	skos:HasTopConcept		frmt:Windows_Media ;
+	skos:HasTopConcept		frmt:Windows_Media_Audio ;
+	skos:HasTopConcept		frmt:XHTML .
+
+frmt:AI
+	rdf:type skos:Concept ;
+	skos:prefLabel	"AI"@en-GB ;
+	skos:definition	"Adobe Illustrator native format "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:AIFF
+	rdf:type skos:Concept ;
+	skos:prefLabel	"AIFF"@en-GB ;
+	skos:definition	"Apple Computer Inc Audio Interchange Files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:AIFF-C
+	rdf:type skos:Concept ;
+	skos:prefLabel	"AIFF-C"@en-GB ;
+	skos:definition	"Apple Computer Inc Compressed Audio Interchange Files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:ANPA1312
+	rdf:type skos:Concept ;
+	skos:prefLabel	"ANPA1312"@en-GB ;
+	skos:definition	"Newspaper Association of America Text Format (NAA-89-3). "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:BMP
+	rdf:type skos:Concept ;
+	skos:prefLabel	"BMP"@en-GB ;
+	skos:definition	"Microsoft Bit Mapped files "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:CDR
+	rdf:type skos:Concept ;
+	skos:prefLabel	"CDR"@en-GB ;
+	skos:definition	"Corel Draw files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:CSV
+	rdf:type skos:Concept ;
+	skos:prefLabel	"CSV"@en-GB ;
+	skos:definition	"Comma Separated Values data format "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:DNPR
+	rdf:type skos:Concept ;
+	skos:prefLabel	"DNPR"@en-GB ;
+	skos:definition	"Digital News Photo Parameter Record. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:EPS_Adobe_Illustrator_Compatible
+	rdf:type skos:Concept ;
+	skos:prefLabel	"EPS Adobe Illustrator Compatible"@en-GB ;
+	skos:definition	"Encapsulated Postscript Adobe Illustrator pre-v9.0 compatible files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:EPS_Adobe_Illustrator_v9.0_Compatible
+	rdf:type skos:Concept ;
+	skos:prefLabel	"EPS Adobe Illustrator v9.0 Compatible"@en-GB ;
+	skos:definition	"Encapsulated Postscript Adobe Illustrator v9.0 compatible files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:FLA
+	rdf:type skos:Concept ;
+	skos:prefLabel	"FLA"@en-GB ;
+	skos:definition	"Macromedia Flash Animation files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:Freehand
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Freehand"@en-GB ;
+	skos:definition	"Aldus Freehand format files "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:GIF87a
+	rdf:type skos:Concept ;
+	skos:prefLabel	"GIF87a"@en-GB ;
+	skos:definition	"Graphic Information Format 1987a files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:GIF89a_interlaced
+	rdf:type skos:Concept ;
+	skos:prefLabel	"GIF89a interlaced"@en-GB ;
+	skos:definition	"Graphic Information Format 1989a(interlaced) files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:GIF89a_non-interlaced
+	rdf:type skos:Concept ;
+	skos:prefLabel	"GIF89a non-interlaced"@en-GB ;
+	skos:definition	"Graphic Information Format 1989a(non-interlaced) files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:IIM
+	rdf:type skos:Concept ;
+	skos:prefLabel	"IIM"@en-GB ;
+	skos:definition	"Information Interchange Model. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:ImagePac
+	rdf:type skos:Concept ;
+	skos:prefLabel	"ImagePac"@en-GB ;
+	skos:definition	"Eastman Kodak Photo-CD Image-Pac files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:IPTC7901
+	rdf:type skos:Concept ;
+	skos:prefLabel	"IPTC7901"@en-GB ;
+	skos:definition	"IPTC Text Message Format 7901. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:JPEG_Baseline
+	rdf:type skos:Concept ;
+	skos:prefLabel	"JPEG Baseline"@en-GB ;
+	skos:definition	"Joint Pictures Expert Group baseline compression files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:JPEG_Progressive
+	rdf:type skos:Concept ;
+	skos:prefLabel	"JPEG Progressive"@en-GB ;
+	skos:definition	"Joint Pictures Expert Group progressive compression files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:MP3
+	rdf:type skos:Concept ;
+	skos:prefLabel	"MP3"@en-GB ;
+	skos:definition	"Moving Pictures type 3 files "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:MPEG
+	rdf:type skos:Concept ;
+	skos:prefLabel	"MPEG"@en-GB ;
+	skos:definition	"Moving Pictures Expert group. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:NITF
+	rdf:type skos:Concept ;
+	skos:prefLabel	"NITF"@en-GB ;
+	skos:definition	"IPTC News Industry Text Format "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:NSK-TIFF
+	rdf:type skos:Concept ;
+	skos:prefLabel	"NSK-TIFF"@en-GB ;
+	skos:definition	"Japanese Newspaper Publishers TIFF Variant. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:PCX
+	rdf:type skos:Concept ;
+	skos:prefLabel	"PCX"@en-GB ;
+	skos:definition	"ZSoft Paint BMP format files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:PDF
+	rdf:type skos:Concept ;
+	skos:prefLabel	"PDF"@en-GB ;
+	skos:definition	"Adobe Portable Document Files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:PhotoShop
+	rdf:type skos:Concept ;
+	skos:prefLabel	"PhotoShop"@en-GB ;
+	skos:definition	"Adobe Photoshop graphic file format "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:PNG
+	rdf:type skos:Concept ;
+	skos:prefLabel	"PNG"@en-GB ;
+	skos:definition	"Portable Network Graphic files "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:PS
+	rdf:type skos:Concept ;
+	skos:prefLabel	"PS"@en-GB ;
+	skos:definition	"Post Script format "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:Quicktime
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Quicktime"@en-GB ;
+	skos:definition	"Apple Computer Inc format video and/or audio files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:Real_Audio
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Real Audio"@en-GB ;
+	skos:definition	"Real Networks Inc Audio files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:Real_Video
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Real Video"@en-GB ;
+	skos:definition	"Real Networks Inc Video files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:Ritzau-NITF
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Ritzau-NITF"@en-GB ;
+	skos:definition	"Ritzau Variant of NITF. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:SVG
+	rdf:type skos:Concept ;
+	skos:prefLabel	"SVG"@en-GB ;
+	skos:definition	"Scalable Vector Graphic files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:SWF
+	rdf:type skos:Concept ;
+	skos:prefLabel	"SWF"@en-GB ;
+	skos:definition	"Macromedia Shockwave presentation files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:TIF
+	rdf:type skos:Concept ;
+	skos:prefLabel	"TIF"@en-GB ;
+	skos:definition	"Adobe/Aldus Tagged Image File format files "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:TIFF
+	rdf:type skos:Concept ;
+	skos:prefLabel	"TIFF"@en-GB ;
+	skos:definition	"Tagged Image File Format "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:TTNITF
+	rdf:type skos:Concept ;
+	skos:prefLabel	"TTNITF"@en-GB ;
+	skos:definition	"TT Variant of NITF. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:UCOFF
+	rdf:type skos:Concept ;
+	skos:prefLabel	"UCOFF"@en-GB ;
+	skos:definition	"IPTC Unstructured Character Oriented File Format. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:Video_for_Windows
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Video for Windows"@en-GB ;
+	skos:definition	"Microsoft Windows OS video files "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:Waveform_Audio
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Waveform Audio"@en-GB ;
+	skos:definition	"Microsoft and Creative Labs waveform audio files "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:Windows_Media
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Windows Media"@en-GB ;
+	skos:definition	"Microsoft Windows OS media files "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:Windows_Media_Audio
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Windows Media Audio"@en-GB ;
+	skos:definition	"Microsoft Windows OS media audio files "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .
+
+frmt:XHTML
+	rdf:type skos:Concept ;
+	skos:prefLabel	"XHTML"@en-GB ;
+	skos:definition	"W3C XHTML marked up files. "@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/format/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime ;
+	dct:modified "2010-12-15T22:09:34+00:00"^^xsd:dateTime  .

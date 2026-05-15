@@ -1,0 +1,372 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix altidrole:  <http://cv.iptc.org/newscodes/altidrole/> .
+@prefix aoprop:  <http://cv.iptc.org/newscodes/aoproperty/> .
+@prefix app:  <http://cv.iptc.org/newscodes/application/> .
+@prefix aspfacet:  <http://cv.iptc.org/newscodes/asportfacet/> .
+@prefix aspfacetvalue:  <http://cv.iptc.org/newscodes/asportfacetvalue/> .
+@prefix acdc:  <http://cv.iptc.org/newscodes/audiocodec/> .
+@prefix catinat:  <http://cv.iptc.org/newscodes/catinature/> .
+@prefix chprop:  <http://cv.iptc.org/newscodes/characteristicsproperty/> .
+@prefix cinat:  <http://cv.iptc.org/newscodes/cinature/> .
+@prefix colsp:  <http://cv.iptc.org/newscodes/colorspace/> .
+@prefix colin:  <http://cv.iptc.org/newscodes/colourindicator/> .
+@prefix ctech:  <http://cv.iptc.org/newscodes/commtech/> .
+@prefix cptdefrole:  <http://cv.iptc.org/newscodes/conceptdefinitionrole/> .
+@prefix cptnoterole:  <http://cv.iptc.org/newscodes/conceptnoterole/> .
+@prefix cpprole: <http://cv.iptc.org/newscodes/contentprodpartyrole/> .
+@prefix crel:  <http://cv.iptc.org/newscodes/conceptrelation/> .
+@prefix conf:  <http://cv.iptc.org/newscodes/confidence/> .
+@prefix ciprol:  <http://cv.iptc.org/newscodes/contactinfopartrole/> .
+@prefix cwarn:  <http://cv.iptc.org/newscodes/contentwarning/> .
+@prefix ctrol:  <http://cv.iptc.org/newscodes/contributorrole/> .
+@prefix cpnat:  <http://cv.iptc.org/newscodes/cpnature/> .
+@prefix drol:  <http://cv.iptc.org/newscodes/descriptionrole/> .
+@prefix digsrctype:  <http://cv.iptc.org/newscodes/digitalsourcetype/> .
+@prefix dimensionunit:  <http://cv.iptc.org/newscodes/dimensionunit/> .
+@prefix ednoterole:  <http://cv.iptc.org/newscodes/ednoterole/> .
+@prefix dummy:  <http://cv.iptc.org/newscodes/dummy/> .
+@prefix erol:  <http://cv.iptc.org/newscodes/edrole/> .
+@prefix encd:  <http://cv.iptc.org/newscodes/encoding/> .
+@prefix entityprop:  <http://cv.iptc.org/newscodes/entityproperty/> .
+@prefix ecirol:  <http://cv.iptc.org/newscodes/eventcontactinforole/> .
+@prefix edconf:  <http://cv.iptc.org/newscodes/eventdateconfirm/> .
+@prefix eocstat:  <http://cv.iptc.org/newscodes/eventoccurstatus/> .
+@prefix eorol:  <http://cv.iptc.org/newscodes/eventorganiserrole/> .
+@prefix eprol:  <http://cv.iptc.org/newscodes/eventparticipantrole/> .
+@prefix eregrol:  <http://cv.iptc.org/newscodes/eventregrole/> .
+@prefix fisymtype:  <http://cv.iptc.org/newscodes/financialinstrumentsymboltype/> .
+@prefix frmt:  <http://cv.iptc.org/newscodes/format/> .
+@prefix gen:  <http://cv.iptc.org/newscodes/generic/> .
+@prefix genre:  <http://cv.iptc.org/newscodes/genre/> .
+@prefix hashscope:  <http://cv.iptc.org/newscodes/hashscope/> .
+@prefix hashtype:  <http://cv.iptc.org/newscodes/hashtype/> .
+@prefix hopaction:  <http://cv.iptc.org/newscodes/hopaction/> .
+@prefix hatarget:  <http://cv.iptc.org/newscodes/hopactiontarget/> .
+@prefix howextr:  <http://cv.iptc.org/newscodes/howextracted/> .
+@prefix howpr:  <http://cv.iptc.org/newscodes/howpresent/> .
+@prefix ikos:  <http://cv.iptc.org/newscodes/ikos/> .
+@prefix impt:  <http://cv.iptc.org/newscodes/importance/> .
+@prefix isrol:  <http://cv.iptc.org/newscodes/infosourcerole/> .
+@prefix irel:  <http://cv.iptc.org/newscodes/itemrelation/> .
+@prefix irep:  <http://cv.iptc.org/newscodes/itemrepresentation/> .
+@prefix lbtyp:  <http://cv.iptc.org/newscodes/labeltype/> .
+@prefix lrol:  <http://cv.iptc.org/newscodes/languagerole/> .
+@prefix loutorient:  <http://cv.iptc.org/newscodes/layoutorientation/> .
+@prefix loctyp:  <http://cv.iptc.org/newscodes/location/> .
+@prefix medtop:  <http://cv.iptc.org/newscodes/mediatopic/> .
+@prefix mtyp:  <http://cv.iptc.org/newscodes/mediatype/> .
+@prefix medtype:  <http://cv.iptc.org/newscodes/mediatype1/> .
+@prefix nprt:  <http://cv.iptc.org/newscodes/namepart/> .
+@prefix nrol:  <http://cv.iptc.org/newscodes/namerole/> .
+@prefix ncostat:  <http://cv.iptc.org/newscodes/newscoveragestatus/> .
+@prefix nityp:  <http://cv.iptc.org/newscodes/newsitemtype/> .
+@prefix nmsig:  <http://cv.iptc.org/newscodes/newsmsgsignal/> .
+@prefix nprod:  <http://cv.iptc.org/newscodes/newsproduct/> .
+@prefix nprov:  <http://cv.iptc.org/newscodes/newsprovider/> .
+@prefix ninat:  <http://cv.iptc.org/newscodes/ninature/> .
+@prefix not:  <http://cv.iptc.org/newscodes/notation/> .
+@prefix oito:  <http://cv.iptc.org/newscodes/ofinterestto/> .
+@prefix pgrmod:  <http://cv.iptc.org/newscodes/pkggroupmode/> .
+@prefix plinat:  <http://cv.iptc.org/newscodes/plinature/> .
+@prefix prio:  <http://cv.iptc.org/newscodes/priority/> .
+@prefix prodgenre:  <http://cv.iptc.org/newscodes/productgenre/> .
+@prefix prop:  <http://cv.iptc.org/newscodes/property/> .
+@prefix prov:  <http://cv.iptc.org/newscodes/provider/> .
+@prefix stat:  <http://cv.iptc.org/newscodes/pubstatusg2/> .
+@prefix rtype:  <http://cv.iptc.org/newscodes/ratertype/> .
+@prefix rcalctype:  <http://cv.iptc.org/newscodes/rcalctype/> .
+@prefix rel:  <http://cv.iptc.org/newscodes/relevance/> .
+@prefix rnd:  <http://cv.iptc.org/newscodes/rendition/> .
+@prefix riaspect:  <http://cv.iptc.org/newscodes/riaspect/> .
+@prefix rightsprop:  <http://cv.iptc.org/newscodes/rightsproperty/> .
+@prefix riscope:  <http://cv.iptc.org/newscodes/riscope/> .
+@prefix role1:  <http://cv.iptc.org/newscodes/role1/> .
+@prefix rscaleunit:  <http://cv.iptc.org/newscodes/rscaleunit/> .
+@prefix scn:  <http://cv.iptc.org/newscodes/scene/> .
+@prefix sev:  <http://cv.iptc.org/newscodes/severity/> .
+@prefix sig:  <http://cv.iptc.org/newscodes/signal/> .
+@prefix pst1:  <http://cv.iptc.org/newscodes/status1/> .
+@prefix subj:  <http://cv.iptc.org/newscodes/subjectcode/> .
+@prefix squ:  <http://cv.iptc.org/newscodes/subjectqualifier/> .
+@prefix timeunit:  <http://cv.iptc.org/newscodes/timeunit/> .
+@prefix tone:  <http://cv.iptc.org/newscodes/tone/> .
+@prefix tpctyp:  <http://cv.iptc.org/newscodes/topictype/> .
+@prefix trustindicator:  <http://cv.iptc.org/newscodes/trustindicator/> .
+@prefix urgy:  <http://cv.iptc.org/newscodes/urgency/> .
+@prefix useracttype:  <http://cv.iptc.org/newscodes/useractiontype/> .
+@prefix valfmt:  <http://cv.iptc.org/newscodes/valueformat/> .
+@prefix vcdc:  <http://cv.iptc.org/newscodes/videocodec/> .
+@prefix videodef:  <http://cv.iptc.org/newscodes/videodefinition/> .
+@prefix ivqu:  <http://cv.iptc.org/newscodes/videoqualifier/> .
+@prefix sov:  <http://cv.iptc.org/newscodes/videoscaling/> .
+@prefix why:  <http://cv.iptc.org/newscodes/whypresent/> .
+@prefix wldreg:  <http://cv.iptc.org/newscodes/worldregion/> .
+@prefix a1312cat:  <http://cvx.iptc.org/anpa1312-category/> .
+@prefix a1312prio:  <http://cvx.iptc.org/anpa1312-priority/> .
+@prefix a1312svc:  <http://cvx.iptc.org/anpa1312-servicelevel/> .
+@prefix a1312vers:  <http://cvx.iptc.org/anpa1312-version/> .
+@prefix bcp47:  <http://cvx.iptc.org/bcp47/> .
+@prefix cusip:  <http://cvx.iptc.org/cusip/> .
+@prefix gics:  <http://cvx.iptc.org/gics/> .
+@prefix isin:  <http://cvx.iptc.org/isin/> .
+@prefix mic:  <http://cvx.iptc.org/iso10383-mic/> .
+@prefix iso3166-1a2:  <http://cvx.iptc.org/iso3166-1a2/> .
+@prefix iso3166-1a3:  <http://cvx.iptc.org/iso3166-1a3/> .
+@prefix iso4217a:  <http://cvx.iptc.org/iso4217a/> .
+@prefix iso4217n:  <http://cvx.iptc.org/iso4217n/> .
+@prefix secst:  <http://cvx.iptc.org/secst/> .
+@prefix sedol:  <http://cvx.iptc.org/sedol/> .
+@prefix tidm:  <http://cvx.iptc.org/tidm/> .
+@prefix dbpedia:  <http://dbpedia.org/resource/> .
+@prefix mb-artist:  <http://musicbrainz.org/artist/> .
+@prefix mb-label:  <http://musicbrainz.org/label/> .
+@prefix mb-recording:  <http://musicbrainz.org/recording/> .
+@prefix mb-release:  <http://musicbrainz.org/release/> .
+@prefix mb-releasegroup:  <http://musicbrainz.org/release-group/> .
+@prefix mb-work:  <http://musicbrainz.org/work/> .
+@prefix geonames:  <http://sws.geonames.org/> .
+@prefix freebase:  <http://www.freebase.com> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix wikidata:  <http://www.wikidata.org/entity/> .
+
+
+<http://cv.iptc.org/newscodes/digitalsourcetype/> 
+	rdf:type skos:ConceptScheme ; 
+  ikos:prefSchemeAlias "digsrctype" ;
+  ikos:authority "http://www.iptc.org" ;
+  dct:rightsHolder "IPTC, International Press Telecommunications Council - https://iptc.org" ;
+  ikos:licenceLink "http://creativecommons.org/licenses/by/4.0/" ;
+  ikos:dateReleased "2024-10-23T12:00:00+00:00"^^xsd:dateTime ;
+  dct:dateSubmitted "2024-10-23T12:00:00+00:00"^^xsd:dateTime ;
+  skos:prefLabel "Digital Source Type"@en-GB ;
+  skos:definition "Indicates from which source a digital image was created."@en-GB ;
+	skos:hasTopConcept		digsrctype:digitalCapture ;
+	skos:hasTopConcept		digsrctype:computationalCapture ;
+	skos:hasTopConcept		digsrctype:negativeFilm ;
+	skos:hasTopConcept		digsrctype:positiveFilm ;
+	skos:hasTopConcept		digsrctype:print ;
+	skos:hasTopConcept		digsrctype:minorHumanEdits ;
+	skos:hasTopConcept		digsrctype:humanEdits ;
+	skos:hasTopConcept		digsrctype:compositeWithTrainedAlgorithmicMedia ;
+	skos:hasTopConcept		digsrctype:algorithmicallyEnhanced ;
+	skos:hasTopConcept		digsrctype:softwareImage ;
+	skos:hasTopConcept		digsrctype:digitalArt ;
+	skos:hasTopConcept		digsrctype:digitalCreation ;
+	skos:hasTopConcept		digsrctype:dataDrivenMedia ;
+	skos:hasTopConcept		digsrctype:trainedAlgorithmicMedia ;
+	skos:hasTopConcept		digsrctype:algorithmicMedia ;
+	skos:hasTopConcept		digsrctype:screenCapture ;
+	skos:hasTopConcept		digsrctype:virtualRecording ;
+	skos:hasTopConcept		digsrctype:composite ;
+	skos:hasTopConcept		digsrctype:compositeCapture ;
+	skos:hasTopConcept		digsrctype:compositeSynthetic .
+
+digsrctype:digitalCapture
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Digital capture sampled from real life"@en-GB ;
+	skos:definition	"The media was captured from a real-life source using a digital camera or digital recording device"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:computationalCapture
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Multi-frame computational capture sampled from real life"@en-GB ;
+	skos:definition	"The media is the result of capturing multiple frames from a real-life source using a digital camera or digital recording device, then automatically merging them into a single frame using digital signal processing techniques and/or non-generative AI. Includes High Dynamic Range (HDR) processing common in smartphone camera apps."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:negativeFilm
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Digitised from a transparent negative"@en-GB ;
+	skos:definition	"The media was digitised from a negative on film or other transparent medium"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-09-26T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-09-26T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:positiveFilm
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Digitised from a transparent positive"@en-GB ;
+	skos:definition	"The media was digitised from a positive on a transparency or other transparent medium"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-09-26T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-09-26T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:print
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Digitised from a non-transparent medium"@en-GB ;
+	skos:definition	"The media was digitised from a non-transparent medium such as a photographic print"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:minorHumanEdits
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Original media with minor human edits"@en-GB ;
+	skos:definition	"Minor augmentation or correction by a human, such as a digitally-retouched photo used in a magazine"@en-GB ;
+	skos:note	"Retired. Use *humanEdits* instead."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime  ; 
+	ikos:retired "2024-09-17T12:00:00+00:00"^^xsd:dateTime .
+
+digsrctype:humanEdits
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Human-edited media"@en-GB ;
+	skos:definition	"Augmentation, correction or enhancement by one or more humans using non-generative tools"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:compositeWithTrainedAlgorithmicMedia
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Edited using Generative AI"@en-GB ;
+	skos:definition	"Augmentation, correction or enhancement using a Generative AI model, such as with inpainting or outpainting operations"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2023-07-26T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2023-07-26T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:algorithmicallyEnhanced
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Algorithmically-altered media"@en-GB ;
+	skos:definition	"Modification or correction by algorithm without changing the main content of the media, initiated or configured by a human, such as sharpening or applying noise reduction"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-10-23T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-10-23T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:softwareImage
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Created by software"@en-GB ;
+	skos:definition	"The digital image was created by computer software"@en-GB ;
+	skos:note	"Retired in June 2022. Use more specific terms instead."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2008-01-01T01:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2022-06-14T12:00:00+00:00"^^xsd:dateTime  ; 
+	ikos:retired "2022-06-14T12:00:00+00:00"^^xsd:dateTime .
+
+digsrctype:digitalArt
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Digital art"@en-GB ;
+	skos:definition	"Media created by a human using digital tools"@en-GB ;
+	skos:note	"Retired. Use *digitalCreation* instead."@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2022-06-14T12:00:00+00:00"^^xsd:dateTime  ; 
+	ikos:retired "2024-09-17T12:00:00+00:00"^^xsd:dateTime .
+
+digsrctype:digitalCreation
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Digital creation"@en-GB ;
+	skos:definition	"Media created by a human using non-generative tools"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:dataDrivenMedia
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Data-driven media"@en-GB ;
+	skos:definition	"Digital media representation of data via human programming or creativity"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2022-06-14T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:trainedAlgorithmicMedia
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Created using Generative AI"@en-GB ;
+	skos:definition	"Digital media created algorithmically using an Artificial Intelligence model trained on captured content"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-10-23T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-10-23T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:algorithmicMedia
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Pure algorithmic media"@en-GB ;
+	skos:definition	"Media created purely by an algorithm not based on any sampled training data, e.g. an image created by software using a mathematical formula"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2022-06-14T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:screenCapture
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Screen capture"@en-GB ;
+	skos:definition	"A capture of the contents of the screen of a computer or mobile device"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:virtualRecording
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Virtual event recording"@en-GB ;
+	skos:definition	"Live recording of virtual event based on Generative AI and/or captured elements"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:composite
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Composite of elements"@en-GB ;
+	skos:definition	"Mix or composite of several elements, any of which may or may not be generative AI"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2024-09-17T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:compositeCapture
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Composite of captured elements"@en-GB ;
+	skos:definition	"Mix or composite of several elements that are all captures of real life"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2022-06-14T12:00:00+00:00"^^xsd:dateTime  .
+
+digsrctype:compositeSynthetic
+	rdf:type skos:Concept ;
+	skos:prefLabel	"Composite including generative AI elements"@en-GB ;
+	skos:definition	"Mix or composite of several elements, at least one of which is Generative AI"@en-GB ;
+	skos:inScheme <http://cv.iptc.org/newscodes/digitalsourcetype/>  ;
+	ikos:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:created "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	ikos:modified "2022-06-14T12:00:00+00:00"^^xsd:dateTime ;
+	dct:modified "2022-06-14T12:00:00+00:00"^^xsd:dateTime  .
